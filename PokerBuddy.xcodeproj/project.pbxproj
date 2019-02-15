@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CA4DB30221777A800E8A050 /* holdem_hands_sorted_alpha.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */; };
+		A4D171B82216225C004922C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D171B72216225C004922C1 /* AppDelegate.m */; };
+		A4D171C02216225D004922C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D171BF2216225D004922C1 /* Assets.xcassets */; };
+		A4D171C32216225D004922C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D171C12216225D004922C1 /* LaunchScreen.storyboard */; };
+		A4D171C62216225D004922C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D171C52216225D004922C1 /* main.m */; };
+		A4D171D0221636AC004922C1 /* HandChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D171CF221636AC004922C1 /* HandChartViewController.m */; };
+		A4D171D4221727DC004922C1 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D171D3221727DC004922C1 /* Card.m */; };
+		A4D171D7221728B3004922C1 /* Hand.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D171D6221728B3004922C1 /* Hand.m */; };
+		A4D171DC22175C8A004922C1 /* holdem_hands_sorted_actual_ev.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4D171DA22175C8A004922C1 /* holdem_hands_sorted_actual_ev.txt */; };
+		A4D171DD22175C8A004922C1 /* holdem_hands_sorted_ev.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4D171DB22175C8A004922C1 /* holdem_hands_sorted_ev.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_alpha.txt; sourceTree = "<group>"; };
+		A4D171B32216225C004922C1 /* PokerBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D171B62216225C004922C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4D171B72216225C004922C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A4D171BF2216225D004922C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4D171C22216225D004922C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4D171C42216225D004922C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D171C52216225D004922C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4D171CE221636AC004922C1 /* HandChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandChartViewController.h; sourceTree = "<group>"; };
+		A4D171CF221636AC004922C1 /* HandChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandChartViewController.m; sourceTree = "<group>"; };
+		A4D171D2221727DC004922C1 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		A4D171D3221727DC004922C1 /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		A4D171D5221728B3004922C1 /* Hand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hand.h; sourceTree = "<group>"; };
+		A4D171D6221728B3004922C1 /* Hand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hand.m; sourceTree = "<group>"; };
+		A4D171DA22175C8A004922C1 /* holdem_hands_sorted_actual_ev.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_actual_ev.txt; sourceTree = "<group>"; };
+		A4D171DB22175C8A004922C1 /* holdem_hands_sorted_ev.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_ev.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4D171B02216225C004922C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4D171AA2216225B004922C1 = {
+			isa = PBXGroup;
+			children = (
+				A4D171B52216225C004922C1 /* PokerBuddy */,
+				A4D171B42216225C004922C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4D171B42216225C004922C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4D171B32216225C004922C1 /* PokerBuddy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4D171B52216225C004922C1 /* PokerBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				A4D171CD221634A9004922C1 /* HandChart */,
+				A4D171D1221727B6004922C1 /* Model */,
+				A4D171B62216225C004922C1 /* AppDelegate.h */,
+				A4D171B72216225C004922C1 /* AppDelegate.m */,
+				A4D171BF2216225D004922C1 /* Assets.xcassets */,
+				A4D171C12216225D004922C1 /* LaunchScreen.storyboard */,
+				A4D171DA22175C8A004922C1 /* holdem_hands_sorted_actual_ev.txt */,
+				4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */,
+				A4D171DB22175C8A004922C1 /* holdem_hands_sorted_ev.txt */,
+				A4D171C42216225D004922C1 /* Info.plist */,
+				A4D171C52216225D004922C1 /* main.m */,
+			);
+			path = PokerBuddy;
+			sourceTree = "<group>";
+		};
+		A4D171CD221634A9004922C1 /* HandChart */ = {
+			isa = PBXGroup;
+			children = (
+				A4D171CE221636AC004922C1 /* HandChartViewController.h */,
+				A4D171CF221636AC004922C1 /* HandChartViewController.m */,
+			);
+			path = HandChart;
+			sourceTree = "<group>";
+		};
+		A4D171D1221727B6004922C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4D171D2221727DC004922C1 /* Card.h */,
+				A4D171D3221727DC004922C1 /* Card.m */,
+				A4D171D5221728B3004922C1 /* Hand.h */,
+				A4D171D6221728B3004922C1 /* Hand.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4D171B22216225C004922C1 /* PokerBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4D171C92216225D004922C1 /* Build configuration list for PBXNativeTarget "PokerBuddy" */;
+			buildPhases = (
+				A4D171AF2216225C004922C1 /* Sources */,
+				A4D171B02216225C004922C1 /* Frameworks */,
+				A4D171B12216225C004922C1 /* Resources */,
+				A4D171CC22162CB4004922C1 /* Increment Build Number */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokerBuddy;
+			productName = PokerBuddy;
+			productReference = A4D171B32216225C004922C1 /* PokerBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4D171AB2216225B004922C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Huskysoft;
+				TargetAttributes = {
+					A4D171B22216225C004922C1 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = A4D171AE2216225C004922C1 /* Build configuration list for PBXProject "PokerBuddy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4D171AA2216225B004922C1;
+			productRefGroup = A4D171B42216225C004922C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4D171B22216225C004922C1 /* PokerBuddy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4D171B12216225C004922C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D171DD22175C8A004922C1 /* holdem_hands_sorted_ev.txt in Resources */,
+				A4D171C32216225D004922C1 /* LaunchScreen.storyboard in Resources */,
+				4CA4DB30221777A800E8A050 /* holdem_hands_sorted_alpha.txt in Resources */,
+				A4D171DC22175C8A004922C1 /* holdem_hands_sorted_actual_ev.txt in Resources */,
+				A4D171C02216225D004922C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4D171CC22162CB4004922C1 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PLIST=\"${PROJECT_DIR}/${INFOPLIST_FILE}\"\nPLB=/usr/libexec/PlistBuddy\nLAST_NUMBER=$($PLB -c \"Print CFBundleVersion\" \"$PLIST\")\nNEW_VERSION=$(($LAST_NUMBER + 1))\n$PLB -c \"Set :CFBundleVersion $NEW_VERSION\" \"$PLIST\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4D171AF2216225C004922C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D171D7221728B3004922C1 /* Hand.m in Sources */,
+				A4D171C62216225D004922C1 /* main.m in Sources */,
+				A4D171D0221636AC004922C1 /* HandChartViewController.m in Sources */,
+				A4D171B82216225C004922C1 /* AppDelegate.m in Sources */,
+				A4D171D4221727DC004922C1 /* Card.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A4D171C12216225D004922C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4D171C22216225D004922C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4D171C72216225D004922C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A4D171C82216225D004922C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4D171CA2216225D004922C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				INFOPLIST_FILE = PokerBuddy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.huskysoft.PokerBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4D171CB2216225D004922C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				INFOPLIST_FILE = PokerBuddy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.huskysoft.PokerBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4D171AE2216225C004922C1 /* Build configuration list for PBXProject "PokerBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D171C72216225D004922C1 /* Debug */,
+				A4D171C82216225D004922C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4D171C92216225D004922C1 /* Build configuration list for PBXNativeTarget "PokerBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D171CA2216225D004922C1 /* Debug */,
+				A4D171CB2216225D004922C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4D171AB2216225B004922C1 /* Project object */;
+}
