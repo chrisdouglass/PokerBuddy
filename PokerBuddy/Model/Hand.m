@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
   if (string.length == 2) {
     // Pocket pair, no suits.
     card1 = [Card cardFromString:[string substringToIndex:1]];
+    card1.suit = CardSuitHearts;
+    card2.suit = CardSuitSpades;
     card2 = [Card cardFromString:[string substringFromIndex:1]];
   } else if (string.length == 3) {
     // Suited/offsuit hand
@@ -27,16 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
     card2 = [Card cardFromString:card2String];
     card2.suit = suitedChar == 's' ? CardSuitHearts : CardSuitClubs;
   }
-//  Card *card1 = [Card cardFromString:[string substringToIndex:2]];
-//  Card *card2 = [Card cardFromString:[string substringFromIndex:2]];
-  return [[[self class] alloc] initWithCards:@[ card1, card2 ]];
+  return [[[self class] alloc] initWithCards:[NSSet setWithArray:@[ card1, card2 ]]];
 }
 
 - (instancetype)init {
-  return [self initWithCards:@[]];
+  return [self initWithCards:[NSSet set]];
 }
 
-- (instancetype)initWithCards:(NSArray<Card *> *)cards {
+- (instancetype)initWithCards:(NSSet<Card *> *)cards {
   self = [super init];
   if (self) {
     _cards = [cards copy];
@@ -45,11 +45,12 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (BOOL)isPocketPair {
-  return [self.cards[0].rank isEqualToString:self.cards[1].rank];
+  NSArray<Card *> *cards = [self.cards allObjects];
+  return [cards[0].rank isEqualToString:cards[1].rank];
 }
 
 - (BOOL)isSuited {
-  CardSuit suit = [self.cards firstObject].suit;
+  CardSuit suit = [self.cards anyObject].suit;
   for (Card *card in self.cards) {
     if (suit != card.suit || suit == CardSuitUndefined) {
       return NO;
@@ -62,7 +63,8 @@ NS_ASSUME_NONNULL_BEGIN
   if (!self.cards.count) {
     return @"empty";
   }
-  NSString *rankString = [[self.cards valueForKey:@"rank"] componentsJoinedByString:@""];
+  NSArray<Card *> *cards = [self.cards allObjects];
+  NSString *rankString = [[cards valueForKey:@"rank"] componentsJoinedByString:@""];
   if ([self isPocketPair]) {
     return rankString;
   }
@@ -99,6 +101,26 @@ NS_ASSUME_NONNULL_BEGIN
     [hands addObject:[Hand handFromString:line]];
   }
   return hands;
+}
+
+- (BOOL)isEqual:(id)object {
+  if (![object isKindOfClass:[self class]]) {
+    return NO;
+  }
+
+  if (self == object) {
+    return YES;
+  }
+
+  return [self isEqualToHand:object];
+}
+
+- (BOOL)isEqualToHand:(Hand *)hand {
+  return [self.cards isEqual:hand.cards];
+}
+
+- (NSUInteger)hash {
+  return [self.cards hash];
 }
 
 @end

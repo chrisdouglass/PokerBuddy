@@ -38,11 +38,23 @@ NS_ASSUME_NONNULL_BEGIN
           forCellWithReuseIdentifier:@"identifier"];
 }
 
+- (void)setSelectedHands:(NSSet<Hand *> *)selectedHands {
+  if (_selectedHands == selectedHands) {
+    return;
+  }
+  _selectedHands = [selectedHands copy];
+  [self.collectionView reloadData];
+}
+
 - (__kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView
                            cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
   HandChartCollectionViewCell *cell =
       [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
-  cell.hand = self.hands[indexPath.item];
+  Hand *hand = self.hands[indexPath.item];
+  cell.hand = hand;
+  if ([self.selectedHands containsObject:hand]) {
+    cell.selected = YES;
+  }
   return cell;
 }
 

@@ -1,8 +1,6 @@
 #import "AppDelegate.h"
 
-#import "Hand.h"
-
-#import "HandChartViewController.h"
+#import "RangeExplorerViewController.h"
 
 @interface AppDelegate ()
 
@@ -13,9 +11,12 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-  NSArray<Hand *> *hands = [Hand holdemHandsSortedByAlpha];
-  NSLog(@"%@", [hands valueForKey:@"suitedDescription"]);
-  self.window.rootViewController = [HandChartViewController handChartViewControllerFromHands:hands];
+  RangeExplorerViewController *rangeExplorer =
+      [[RangeExplorerViewController alloc] initWithNibName:nil bundle:nil];
+  rangeExplorer.title = @"Holdem Range Explorer";
+  UINavigationController *navController =
+      [[UINavigationController alloc] initWithRootViewController:rangeExplorer];
+  self.window.rootViewController = navController;
   [self.window makeKeyAndVisible];
   return YES;
 }

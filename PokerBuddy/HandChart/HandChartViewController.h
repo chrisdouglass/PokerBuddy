@@ -6,7 +6,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HandChartViewController : UICollectionViewController
 
-@property(nonatomic, readonly) NSArray<Hand *> *hands;
+@property(nonatomic, copy, readonly) NSArray<Hand *> *hands;
+@property(nonatomic, copy) NSSet<Hand *> *selectedHands;
 
 + (instancetype)handChartViewControllerFromHands:(NSArray<Hand *> *)hands;
 

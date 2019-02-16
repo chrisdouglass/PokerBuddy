@@ -27,6 +27,26 @@ NS_ASSUME_NONNULL_BEGIN
   return [NSString stringWithFormat:@"%@%@", self.rank, [[self class] suitIconForSuit:self.suit]];
 }
 
+- (BOOL)isEqual:(id)object {
+  if (![object isKindOfClass:[self class]]) {
+    return NO;
+  }
+
+  if (self == object) {
+    return YES;
+  }
+
+  return [self isEqualToCard:object];
+}
+
+- (BOOL)isEqualToCard:(Card *)card {
+  return [self.rank isEqualToString:card.rank] && self.suit == card.suit;
+}
+
+- (NSUInteger)hash {
+  return [self.rank hash] + self.suit;
+}
+
 + (CardSuit)suitFromString:(NSString *)suitString {
   if ([suitString isEqualToString:@"c"]) {
     return CardSuitClubs;
