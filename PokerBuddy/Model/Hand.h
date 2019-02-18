@@ -21,8 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isPocketPair;
 
+- (BOOL)isSuited;
+
 - (BOOL)isEqualToHand:(Hand *)hand;
-- (BOOL)isEqualToHand:(Hand *)hand ignoringSuits:(BOOL)ignoringSuits;
 
 @end
 

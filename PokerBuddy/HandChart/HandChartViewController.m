@@ -43,7 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
     return;
   }
   _selectedHands = [selectedHands copy];
-  [self.collectionView reloadData];
+  for (HandChartCollectionViewCell *cell in self.collectionView.visibleCells) {
+    cell.selected = [_selectedHands containsObject:cell.hand];
+  }
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView

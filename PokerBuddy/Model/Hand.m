@@ -80,15 +80,25 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 + (NSArray<Hand *> *)holdemHandsSortedByAlpha {
-  NSString *filePath =
-      [[NSBundle mainBundle] pathForResource:@"holdem_hands_sorted_alpha" ofType:@"txt"];
-  return [self loadHandsFromFileAtPath:filePath];
+  static dispatch_once_t onceToken;
+  static NSArray<Hand *> *alphaHands;
+  dispatch_once(&onceToken, ^{
+    NSString *filePath =
+        [[NSBundle mainBundle] pathForResource:@"holdem_hands_sorted_alpha" ofType:@"txt"];
+    alphaHands = [self loadHandsFromFileAtPath:filePath];
+  });
+  return alphaHands;
 }
 
 + (NSArray<Hand *> *)holdemHandsSortedByEV {
-  NSString *filePath =
-      [[NSBundle mainBundle] pathForResource:@"holdem_hands_sorted_ev" ofType:@"txt"];
-  return [self loadHandsFromFileAtPath:filePath];
+  static dispatch_once_t onceToken;
+  static NSArray<Hand *> *evHands;
+  dispatch_once(&onceToken, ^{
+    NSString *filePath =
+        [[NSBundle mainBundle] pathForResource:@"holdem_hands_sorted_ev" ofType:@"txt"];
+    evHands = [self loadHandsFromFileAtPath:filePath];
+  });
+  return evHands;
 }
 
 + (NSArray<Hand *> *)loadHandsFromFileAtPath:(NSString *)filePath {

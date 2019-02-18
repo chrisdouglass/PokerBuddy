@@ -8,6 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RangeExplorerViewController ()
 @property(nonatomic) UISlider *slider;
 @property(nonatomic, copy) NSArray<Hand *> *selectedHands;
+@property(nonatomic) UILabel *percentageLabel;
 @end
 
 @implementation RangeExplorerViewController {
@@ -41,9 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
     forControlEvents:UIControlEventValueChanged];
   [self.view addSubview:_slider];
 
+  _percentageLabel = [[UILabel alloc] init];
+  _percentageLabel.font = [UIFont boldSystemFontOfSize:36.f];
+  [self.view addSubview:_percentageLabel];
+
   UIView *handChartView = _handChart.view;
   handChartView.translatesAutoresizingMaskIntoConstraints = NO;
   _slider.translatesAutoresizingMaskIntoConstraints = NO;
+  _percentageLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
   [NSLayoutConstraint activateConstraints:@[
     [handChartView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
@@ -54,12 +60,15 @@ NS_ASSUME_NONNULL_BEGIN
     [_slider.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16.f],
     [_slider.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.topAnchor constant:-16.f],
     [_slider.heightAnchor constraintEqualToConstant:30.f],
+    [_percentageLabel.bottomAnchor constraintEqualToAnchor:_slider.topAnchor],
+    [_percentageLabel.centerXAnchor constraintEqualToAnchor:_slider.centerXAnchor],
   ]];
 }
 
 - (void)updateSelectedHands {
   NSArray *selectedHands = [Hand holdemHandsSortedByEV];
   float percentage = _slider.value;
+  _percentageLabel.text = [NSString stringWithFormat:@"%.f%%", percentage * 100.f];
   NSArray *array =
       [selectedHands subarrayWithRange:NSMakeRange(0, selectedHands.count * percentage)];
   _handChart.selectedHands = [NSSet setWithArray:array];
