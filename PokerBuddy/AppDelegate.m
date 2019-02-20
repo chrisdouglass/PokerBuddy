@@ -2,10 +2,6 @@
 
 #import "RootTabBarController.h"
 
-#warning remove this
-#import "GammaAPIController.h"
-#import "CasinoListTableViewController.h"
-
 @interface AppDelegate ()
 
 @end
