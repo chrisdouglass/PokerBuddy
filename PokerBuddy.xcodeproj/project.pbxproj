@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4CA4DB30221777A800E8A050 /* holdem_hands_sorted_alpha.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */; };
 		4CA4DB342217823500E8A050 /* RangeExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */; };
+		4CA4DB38221B6F4700E8A050 /* GammaAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB37221B6F4700E8A050 /* GammaAPIController.m */; };
+		4CA4DB3C221B710F00E8A050 /* GammaCasino.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB3B221B710F00E8A050 /* GammaCasino.m */; };
+		4CA4DB3F221B72E100E8A050 /* GammaGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB3E221B72E100E8A050 /* GammaGame.m */; };
+		4CA4DB42221B79FC00E8A050 /* GammaGameLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB41221B79FC00E8A050 /* GammaGameLimit.m */; };
+		4CA4DB45221B7BFA00E8A050 /* GammaTournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB44221B7BFA00E8A050 /* GammaTournament.m */; };
 		A4D171B82216225C004922C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D171B72216225C004922C1 /* AppDelegate.m */; };
 		A4D171C02216225D004922C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D171BF2216225D004922C1 /* Assets.xcassets */; };
 		A4D171C32216225D004922C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D171C12216225D004922C1 /* LaunchScreen.storyboard */; };
@@ -24,6 +29,16 @@
 		4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_alpha.txt; sourceTree = "<group>"; };
 		4CA4DB322217823500E8A050 /* RangeExplorerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeExplorerViewController.h; sourceTree = "<group>"; };
 		4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RangeExplorerViewController.m; sourceTree = "<group>"; };
+		4CA4DB36221B6F4700E8A050 /* GammaAPIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GammaAPIController.h; sourceTree = "<group>"; };
+		4CA4DB37221B6F4700E8A050 /* GammaAPIController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GammaAPIController.m; sourceTree = "<group>"; };
+		4CA4DB3A221B710F00E8A050 /* GammaCasino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GammaCasino.h; sourceTree = "<group>"; };
+		4CA4DB3B221B710F00E8A050 /* GammaCasino.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GammaCasino.m; sourceTree = "<group>"; };
+		4CA4DB3D221B72E100E8A050 /* GammaGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GammaGame.h; sourceTree = "<group>"; };
+		4CA4DB3E221B72E100E8A050 /* GammaGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GammaGame.m; sourceTree = "<group>"; };
+		4CA4DB40221B79EB00E8A050 /* GammaGameLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GammaGameLimit.h; sourceTree = "<group>"; };
+		4CA4DB41221B79FC00E8A050 /* GammaGameLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GammaGameLimit.m; sourceTree = "<group>"; };
+		4CA4DB43221B7BFA00E8A050 /* GammaTournament.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GammaTournament.h; sourceTree = "<group>"; };
+		4CA4DB44221B7BFA00E8A050 /* GammaTournament.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GammaTournament.m; sourceTree = "<group>"; };
 		A4D171B32216225C004922C1 /* PokerBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D171B62216225C004922C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4D171B72216225C004922C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +76,31 @@
 			path = RangeExplorer;
 			sourceTree = "<group>";
 		};
+		4CA4DB35221B6F2900E8A050 /* GammaAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4CA4DB39221B710400E8A050 /* Model */,
+				4CA4DB36221B6F4700E8A050 /* GammaAPIController.h */,
+				4CA4DB37221B6F4700E8A050 /* GammaAPIController.m */,
+			);
+			path = GammaAPI;
+			sourceTree = "<group>";
+		};
+		4CA4DB39221B710400E8A050 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CA4DB3A221B710F00E8A050 /* GammaCasino.h */,
+				4CA4DB3B221B710F00E8A050 /* GammaCasino.m */,
+				4CA4DB3D221B72E100E8A050 /* GammaGame.h */,
+				4CA4DB3E221B72E100E8A050 /* GammaGame.m */,
+				4CA4DB40221B79EB00E8A050 /* GammaGameLimit.h */,
+				4CA4DB41221B79FC00E8A050 /* GammaGameLimit.m */,
+				4CA4DB43221B7BFA00E8A050 /* GammaTournament.h */,
+				4CA4DB44221B7BFA00E8A050 /* GammaTournament.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A4D171AA2216225B004922C1 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +120,7 @@
 		A4D171B52216225C004922C1 /* PokerBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4CA4DB35221B6F2900E8A050 /* GammaAPI */,
 				A4D171CD221634A9004922C1 /* HandChart */,
 				A4D171D1221727B6004922C1 /* Model */,
 				4CA4DB312217822400E8A050 /* RangeExplorer */,
@@ -211,11 +252,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D171D7221728B3004922C1 /* Hand.m in Sources */,
+				4CA4DB42221B79FC00E8A050 /* GammaGameLimit.m in Sources */,
 				A4D171C62216225D004922C1 /* main.m in Sources */,
 				A4D171D0221636AC004922C1 /* HandChartViewController.m in Sources */,
+				4CA4DB45221B7BFA00E8A050 /* GammaTournament.m in Sources */,
 				A4D171B82216225C004922C1 /* AppDelegate.m in Sources */,
 				A4D171D4221727DC004922C1 /* Card.m in Sources */,
+				4CA4DB3F221B72E100E8A050 /* GammaGame.m in Sources */,
 				4CA4DB342217823500E8A050 /* RangeExplorerViewController.m in Sources */,
+				4CA4DB38221B6F4700E8A050 /* GammaAPIController.m in Sources */,
+				4CA4DB3C221B710F00E8A050 /* GammaCasino.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAZ26D947S;
 				INFOPLIST_FILE = PokerBuddy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
