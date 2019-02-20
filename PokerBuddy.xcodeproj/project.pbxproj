@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C7CCDDD221D364E001E74FA /* CasinoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */; };
+		4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */; };
 		4CA4DB30221777A800E8A050 /* holdem_hands_sorted_alpha.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */; };
 		4CA4DB342217823500E8A050 /* RangeExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */; };
 		4CA4DB38221B6F4700E8A050 /* GammaAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB37221B6F4700E8A050 /* GammaAPIController.m */; };
@@ -26,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C7CCDDB221D364E001E74FA /* CasinoListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CasinoListTableViewController.h; sourceTree = "<group>"; };
+		4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CasinoListTableViewController.m; sourceTree = "<group>"; };
+		4C7CCDE1221D3A2C001E74FA /* RootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_alpha.txt; sourceTree = "<group>"; };
 		4CA4DB322217823500E8A050 /* RangeExplorerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeExplorerViewController.h; sourceTree = "<group>"; };
 		4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RangeExplorerViewController.m; sourceTree = "<group>"; };
@@ -67,6 +73,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C7CCDDA221D362A001E74FA /* CasinoList */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CCDDB221D364E001E74FA /* CasinoListTableViewController.h */,
+				4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */,
+			);
+			path = CasinoList;
+			sourceTree = "<group>";
+		};
+		4C7CCDE0221D3A17001E74FA /* RootTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CCDE1221D3A2C001E74FA /* RootTabBarController.h */,
+				4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */,
+			);
+			path = RootTabBarController;
+			sourceTree = "<group>";
+		};
 		4CA4DB312217822400E8A050 /* RangeExplorer */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,10 +144,12 @@
 		A4D171B52216225C004922C1 /* PokerBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4C7CCDDA221D362A001E74FA /* CasinoList */,
 				4CA4DB35221B6F2900E8A050 /* GammaAPI */,
 				A4D171CD221634A9004922C1 /* HandChart */,
 				A4D171D1221727B6004922C1 /* Model */,
 				4CA4DB312217822400E8A050 /* RangeExplorer */,
+				4C7CCDE0221D3A17001E74FA /* RootTabBarController */,
 				A4D171B62216225C004922C1 /* AppDelegate.h */,
 				A4D171B72216225C004922C1 /* AppDelegate.m */,
 				A4D171BF2216225D004922C1 /* Assets.xcassets */,
@@ -255,8 +281,10 @@
 				4CA4DB42221B79FC00E8A050 /* GammaGameLimit.m in Sources */,
 				A4D171C62216225D004922C1 /* main.m in Sources */,
 				A4D171D0221636AC004922C1 /* HandChartViewController.m in Sources */,
+				4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */,
 				4CA4DB45221B7BFA00E8A050 /* GammaTournament.m in Sources */,
 				A4D171B82216225C004922C1 /* AppDelegate.m in Sources */,
+				4C7CCDDD221D364E001E74FA /* CasinoListTableViewController.m in Sources */,
 				A4D171D4221727DC004922C1 /* Card.m in Sources */,
 				4CA4DB3F221B72E100E8A050 /* GammaGame.m in Sources */,
 				4CA4DB342217823500E8A050 /* RangeExplorerViewController.m in Sources */,

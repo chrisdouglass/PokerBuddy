@@ -1,6 +1,10 @@
 #import "AppDelegate.h"
 
-#import "RangeExplorerViewController.h"
+#import "RootTabBarController.h"
+
+#warning remove this
+#import "GammaAPIController.h"
+#import "CasinoListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -11,15 +15,11 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-  RangeExplorerViewController *rangeExplorer =
-      [[RangeExplorerViewController alloc] initWithNibName:nil bundle:nil];
-  rangeExplorer.title = @"Holdem Range Explorer";
-  UINavigationController *navController =
-      [[UINavigationController alloc] initWithRootViewController:rangeExplorer];
-  self.window.rootViewController = navController;
+  RootTabBarController *rootTabView = [RootTabBarController rootTabBarController];
+  self.window.rootViewController = rootTabView;
   [self.window makeKeyAndVisible];
+
   return YES;
 }
-
 
 @end
