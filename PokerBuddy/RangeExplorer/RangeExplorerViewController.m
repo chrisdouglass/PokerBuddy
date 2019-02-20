@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
   [_handChart didMoveToParentViewController:self];
 
   _slider = [[UISlider alloc] init];
+  _slider.maximumValue = 100;
   [_slider addTarget:self
               action:@selector(updateSelectedHands)
     forControlEvents:UIControlEventValueChanged];
@@ -44,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 
   _percentageLabel = [[UILabel alloc] init];
   _percentageLabel.font = [UIFont boldSystemFontOfSize:36.f];
+  _percentageLabel.text = @"0%";
   [self.view addSubview:_percentageLabel];
 
   UIView *handChartView = _handChart.view;
@@ -66,11 +68,13 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)updateSelectedHands {
+  [_slider setValue:(int)_slider.value animated:NO];
+
   NSArray *selectedHands = [Hand holdemHandsSortedByEV];
   float percentage = _slider.value;
-  _percentageLabel.text = [NSString stringWithFormat:@"%.f%%", percentage * 100.f];
+  _percentageLabel.text = [NSString stringWithFormat:@"%.f%%", percentage];
   NSArray *array =
-      [selectedHands subarrayWithRange:NSMakeRange(0, selectedHands.count * percentage)];
+      [selectedHands subarrayWithRange:NSMakeRange(0, selectedHands.count * percentage/100.f)];
   _handChart.selectedHands = [NSSet setWithArray:array];
 }
 
