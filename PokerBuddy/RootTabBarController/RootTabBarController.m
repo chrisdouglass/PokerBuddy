@@ -5,6 +5,7 @@
 
 #warning remove this
 #import "GammaAPIController.h"
+#import "GammaCasino.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,17 +30,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setupViewControllers {
   _casinoListViewController = [CasinoListTableViewController casinoListWithCasinos:nil];
-  _casinoListViewController.title = @"Casino List";
+  _casinoListViewController.title = @"Poker Rooms";
+  _casinoListViewController.tabBarItem.image = [UIImage imageNamed:@"ic_cards"];
   UINavigationController *casinoListNavController =
       [[UINavigationController alloc] initWithRootViewController:_casinoListViewController];
 
   RangeExplorerViewController *rangeExplorer =
       [[RangeExplorerViewController alloc] initWithNibName:nil bundle:nil];
   rangeExplorer.title = @"Range Explorer";
+  rangeExplorer.tabBarItem.image = [UIImage imageNamed:@"ic_calculator"];
   UINavigationController *rangeExplorerNavController =
       [[UINavigationController alloc] initWithRootViewController:rangeExplorer];
 
-  self.viewControllers = @[ rangeExplorerNavController, casinoListNavController ];
+  self.viewControllers = @[ casinoListNavController, rangeExplorerNavController ];
 }
 
 #warning remove
