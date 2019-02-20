@@ -4,6 +4,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static const NSUInteger kTotalHoldemHandCount = 1326;
+
 @interface Hand ()
 @end
 
@@ -29,14 +31,20 @@ NS_ASSUME_NONNULL_BEGIN
     card2 = [Card cardFromString:card2String];
     card2.suit = suitedChar == 's' ? CardSuitHearts : CardSuitClubs;
   }
-  return [[[self class] alloc] initWithCards:[NSSet setWithArray:@[ card1, card2 ]]];
+  NSArray<Card *> *cards;
+  if ([card1 compare:card2] == NSOrderedDescending) {
+    cards = @[ card1, card2 ];
+  } else {
+    cards = @[ card2, card1 ];
+  }
+  return [[[self class] alloc] initWithCards:cards];
 }
 
 - (instancetype)init {
-  return [self initWithCards:[NSSet set]];
+  return [self initWithCards:@[]];
 }
 
-- (instancetype)initWithCards:(NSSet<Card *> *)cards {
+- (instancetype)initWithCards:(NSArray<Card *> *)cards {
   self = [super init];
   if (self) {
     _cards = [cards copy];
@@ -45,12 +53,12 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (BOOL)isPocketPair {
-  NSArray<Card *> *cards = [self.cards allObjects];
+  NSArray<Card *> *cards = self.cards;
   return [cards[0].rank isEqualToString:cards[1].rank];
 }
 
 - (BOOL)isSuited {
-  CardSuit suit = [self.cards anyObject].suit;
+  CardSuit suit = [self.cards firstObject].suit;
   for (Card *card in self.cards) {
     if (suit != card.suit || suit == CardSuitUndefined) {
       return NO;
@@ -59,11 +67,20 @@ NS_ASSUME_NONNULL_BEGIN
   return YES;
 }
 
+- (NSUInteger)combinationCount {
+  if ([self isPocketPair]) {
+    return 6;
+  } else if ([self isSuited]) {
+    return 4;
+  }
+  return 12;
+}
+
 - (NSString *)suitedDescription {
   if (!self.cards.count) {
     return @"empty";
   }
-  NSArray<Card *> *cards = [self.cards allObjects];
+  NSArray<Card *> *cards = self.cards;
   NSString *rankString = [[cards valueForKey:@"rank"] componentsJoinedByString:@""];
   if ([self isPocketPair]) {
     return rankString;
@@ -99,6 +116,21 @@ NS_ASSUME_NONNULL_BEGIN
     evHands = [self loadHandsFromFileAtPath:filePath];
   });
   return evHands;
+}
+
++ (NSArray<Hand *> *)topPercentageOfHoldemHandsSortedByEV:(double)percentage {
+  NSAssert(percentage <= 1, @"Percentage %lf must be below 1.", percentage);
+  NSArray *selectedHands = [Hand holdemHandsSortedByEV];
+  NSMutableArray<Hand *> *hands = [NSMutableArray array];
+  NSUInteger explodedHandCount = 0;
+  NSUInteger maxExplodedHandCount = kTotalHoldemHandCount * percentage;
+  for (Hand *hand in selectedHands) {
+    explodedHandCount += [hand combinationCount];
+    if (explodedHandCount <= maxExplodedHandCount) {
+      [hands addObject:hand];
+    }
+  }
+  return hands;
 }
 
 + (NSArray<Hand *> *)loadHandsFromFileAtPath:(NSString *)filePath {

@@ -70,12 +70,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateSelectedHands {
   [_slider setValue:(int)_slider.value animated:NO];
 
-  NSArray *selectedHands = [Hand holdemHandsSortedByEV];
-  float percentage = _slider.value;
-  _percentageLabel.text = [NSString stringWithFormat:@"%.f%%", percentage];
-  NSArray *array =
-      [selectedHands subarrayWithRange:NSMakeRange(0, selectedHands.count * percentage/100.f)];
-  _handChart.selectedHands = [NSSet setWithArray:array];
+  float sliderValue = _slider.value;
+  float percentage = sliderValue / 100.f;
+  NSArray *selectedHands = [Hand topPercentageOfHoldemHandsSortedByEV:percentage];
+  _percentageLabel.text = [NSString stringWithFormat:@"%.f%%", sliderValue];
+  _handChart.selectedHands = [NSSet setWithArray:selectedHands];
 }
 
 @end
