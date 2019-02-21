@@ -10,6 +10,11 @@
 		4C7CCDDD221D364E001E74FA /* CasinoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */; };
 		4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */; };
 		4C7CCDE5221D46B0001E74FA /* holdem_hands_sorted_ev.new.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE4221D46AF001E74FA /* holdem_hands_sorted_ev.new.txt */; };
+		4C7CCDE8221E363A001E74FA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE6221E363A001E74FA /* Model.xcdatamodeld */; };
+		4C7CCDF0221E3AA3001E74FA /* Casino.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDEE221E3AA3001E74FA /* Casino.m */; };
+		4C7CCDF3221E3AD9001E74FA /* Casino+Gamma.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDF2221E3AD9001E74FA /* Casino+Gamma.m */; };
+		4C7CCDF6221E3DB9001E74FA /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7CCDF5221E3DB9001E74FA /* Contacts.framework */; };
+		4C7CCDF9221E4163001E74FA /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDF8221E4163001E74FA /* Store.m */; };
 		4CA4DB30221777A800E8A050 /* holdem_hands_sorted_alpha.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */; };
 		4CA4DB342217823500E8A050 /* RangeExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */; };
 		4CA4DB38221B6F4700E8A050 /* GammaAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB37221B6F4700E8A050 /* GammaAPIController.m */; };
@@ -34,6 +39,14 @@
 		4C7CCDE1221D3A2C001E74FA /* RootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		4C7CCDE4221D46AF001E74FA /* holdem_hands_sorted_ev.new.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_ev.new.txt; sourceTree = "<group>"; };
+		4C7CCDE7221E363A001E74FA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4C7CCDEE221E3AA3001E74FA /* Casino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Casino.m; sourceTree = "<group>"; };
+		4C7CCDEF221E3AA3001E74FA /* Casino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Casino.h; sourceTree = "<group>"; };
+		4C7CCDF1221E3AD9001E74FA /* Casino+Gamma.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Casino+Gamma.h"; sourceTree = "<group>"; };
+		4C7CCDF2221E3AD9001E74FA /* Casino+Gamma.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Casino+Gamma.m"; sourceTree = "<group>"; };
+		4C7CCDF5221E3DB9001E74FA /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		4C7CCDF7221E4163001E74FA /* Store.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		4C7CCDF8221E4163001E74FA /* Store.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_alpha.txt; sourceTree = "<group>"; };
 		4CA4DB322217823500E8A050 /* RangeExplorerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeExplorerViewController.h; sourceTree = "<group>"; };
 		4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RangeExplorerViewController.m; sourceTree = "<group>"; };
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7CCDF6221E3DB9001E74FA /* Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +105,32 @@
 				4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */,
 			);
 			path = RootTabBarController;
+			sourceTree = "<group>";
+		};
+		4C7CCDEC221E3AA3001E74FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CCDF1221E3AD9001E74FA /* Casino+Gamma.h */,
+				4C7CCDF2221E3AD9001E74FA /* Casino+Gamma.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C7CCDED221E3AA3001E74FA /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CCDEF221E3AA3001E74FA /* Casino.h */,
+				4C7CCDEE221E3AA3001E74FA /* Casino.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		4C7CCDF4221E3DB9001E74FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CCDF5221E3DB9001E74FA /* Contacts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4CA4DB312217822400E8A050 /* RangeExplorer */ = {
@@ -132,6 +172,7 @@
 			children = (
 				A4D171B52216225C004922C1 /* PokerBuddy */,
 				A4D171B42216225C004922C1 /* Products */,
+				4C7CCDF4221E3DB9001E74FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,10 +219,15 @@
 		A4D171D1221727B6004922C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C7CCDEC221E3AA3001E74FA /* Extensions */,
+				4C7CCDED221E3AA3001E74FA /* Objects */,
 				A4D171D2221727DC004922C1 /* Card.h */,
 				A4D171D3221727DC004922C1 /* Card.m */,
 				A4D171D5221728B3004922C1 /* Hand.h */,
 				A4D171D6221728B3004922C1 /* Hand.m */,
+				4C7CCDE6221E363A001E74FA /* Model.xcdatamodeld */,
+				4C7CCDF7221E4163001E74FA /* Store.h */,
+				4C7CCDF8221E4163001E74FA /* Store.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,13 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7CCDF0221E3AA3001E74FA /* Casino.m in Sources */,
 				A4D171D7221728B3004922C1 /* Hand.m in Sources */,
 				4CA4DB42221B79FC00E8A050 /* GammaGameLimit.m in Sources */,
 				A4D171C62216225D004922C1 /* main.m in Sources */,
+				4C7CCDE8221E363A001E74FA /* Model.xcdatamodeld in Sources */,
 				A4D171D0221636AC004922C1 /* HandChartViewController.m in Sources */,
 				4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */,
+				4C7CCDF9221E4163001E74FA /* Store.m in Sources */,
 				4CA4DB45221B7BFA00E8A050 /* GammaTournament.m in Sources */,
 				A4D171B82216225C004922C1 /* AppDelegate.m in Sources */,
+				4C7CCDF3221E3AD9001E74FA /* Casino+Gamma.m in Sources */,
 				4C7CCDDD221D364E001E74FA /* CasinoListTableViewController.m in Sources */,
 				A4D171D4221727DC004922C1 /* Card.m in Sources */,
 				4CA4DB3F221B72E100E8A050 /* GammaGame.m in Sources */,
@@ -362,6 +412,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -415,6 +469,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -482,6 +540,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C7CCDE6221E363A001E74FA /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C7CCDE7221E363A001E74FA /* Model.xcdatamodel */,
+			);
+			currentVersion = 4C7CCDE7221E363A001E74FA /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A4D171AB2216225B004922C1 /* Project object */;
 }

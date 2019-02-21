@@ -1,6 +1,9 @@
-#import "CasinoListTableViewController.h"
+#import "CasinoList/CasinoListTableViewController.h"
 
-#import "GammaCasino.h"
+#import "GammaAPI/Model/GammaCasino.h"
+
+#warning remove these
+#import "Model/Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,6 +33,15 @@ NS_ASSUME_NONNULL_BEGIN
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier"];
   cell.textLabel.text = self.casinos[indexPath.row].shortName;
   return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  Store *store = [[Store alloc] init];
+  (void)[store insertCasinoFromGammaCasino:self.casinos[indexPath.row]];
+  NSError *error = nil;
+  [store save:&error];
+  NSAssert(!error, @"");
 }
 
 - (void)setCasinos:(nullable NSArray<GammaCasino *> *)casinos {

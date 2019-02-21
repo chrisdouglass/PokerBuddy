@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Casino" representedClassName="Casino" syncable="YES" codeGenerationType="category">
+        <attribute name="active" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="casinoLongDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="casinoShortDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" attributeType="String" syncable="YES"/>
+        <attribute name="largeImageRemotePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastDistance" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mediumImageRemotePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalAddress" optional="YES" attributeType="Transformable" customClassName="CNPostalAddress" syncable="YES"/>
+        <attribute name="smallImageRemotePath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Casino" positionX="-6378.859375" positionY="-10425.50390625" width="128" height="223"/>
+    </elements>
+</model>
