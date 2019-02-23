@@ -2,6 +2,7 @@
 
 #import <CoreData/CoreData.h>
 
+#import "GammaAPI/Model/GammaCasino.h"
 #import "Model/Extensions/Casino+Gamma.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,7 +30,7 @@ static NSString *const kStoreDBName = @"Model.sqlite";
     NSURL *persistentStoreURL = [documentsDirectoryURL URLByAppendingPathComponent:kStoreDBName];
 
     NSError *addStoreError = nil;
-    [coordinator addPersistentStoreWithType:NSInMemoryStoreType
+    [coordinator addPersistentStoreWithType:NSSQLiteStoreType
                               configuration:nil
                                         URL:persistentStoreURL
                                     options:nil
@@ -72,6 +73,36 @@ static NSString *const kStoreDBName = @"Model.sqlite";
   Casino *casino = [self insertNewEntityForName:@"Casino"];
   [casino gamma_updateWithGammaCasino:gammaCasino];
   return casino;
+}
+
+- (void)updateCasinosFromGammaCasinos:(NSArray<GammaCasino *> *)gammaCasinos {
+  for (GammaCasino *gammaCasino in gammaCasinos) {
+    NSFetchRequest *request = [Casino fetchRequest];
+    request.predicate =
+        [NSPredicate predicateWithFormat:@"identifier == %@", gammaCasino.casinoID];
+    NSError *fetchError = nil;
+    Casino *casino = [[self.context executeFetchRequest:request error:&fetchError] firstObject];
+    NSAssert(!fetchError, @"Error fetching a casino: %@", fetchError);
+    if (!casino) {
+      [self insertCasinoFromGammaCasino:gammaCasino];
+      continue;
+    }
+    [casino gamma_updateWithGammaCasino:gammaCasino];
+  }
+}
+
+- (NSFetchRequest<Casino *> *)casinoFetchRequest {
+  NSFetchRequest<Casino *> *request = [Casino fetchRequest];
+  request.sortDescriptors =
+      @[ [NSSortDescriptor sortDescriptorWithKey:@"lastDistance" ascending:YES] ];
+  return request;
+}
+
+- (NSFetchedResultsController *)resultsControllerWithRequest:(NSFetchRequest *)request {
+  return [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                             managedObjectContext:self.context
+                                               sectionNameKeyPath:nil
+                                                        cacheName:nil];
 }
 
 - (__kindof NSManagedObject *)insertNewEntityForName:(NSString *)name {

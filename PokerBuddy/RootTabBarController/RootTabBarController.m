@@ -2,6 +2,7 @@
 
 #import "CasinoListTableViewController.h"
 #import "RangeExplorerViewController.h"
+#import "Model/Store.h"
 
 #warning remove this
 #import "GammaAPIController.h"
@@ -11,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RootTabBarController ()
 @property(nonatomic, readonly) CasinoListTableViewController *casinoListViewController;
+@property(nonatomic) Store *store;
 @end
 
 @implementation RootTabBarController
@@ -18,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)rootTabBarController {
   RootTabBarController *rootTabBarController =
       [[RootTabBarController alloc] initWithNibName:nil bundle:nil];
+  rootTabBarController.store = [[Store alloc] init];
   [rootTabBarController setupViewControllers];
   return rootTabBarController;
 }
@@ -29,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)setupViewControllers {
-  _casinoListViewController = [CasinoListTableViewController casinoListWithCasinos:nil];
+  _casinoListViewController = [CasinoListTableViewController casinoListWithStore:self.store];
   _casinoListViewController.title = @"Poker Rooms";
   _casinoListViewController.tabBarItem.image = [UIImage imageNamed:@"ic_cards"];
   UINavigationController *casinoListNavController =
@@ -48,12 +51,15 @@ NS_ASSUME_NONNULL_BEGIN
 #warning remove
 - (void)gammaTest {
   GammaAPIController *controller = [[GammaAPIController alloc] init];
-  [controller casinosByLocation:nil
-                  radiusInMiles:10000
+  // Using San Jose for now.
+  [controller casinosByLocation:[[CLLocation alloc] initWithLatitude:37.3382 longitude:-121.8863]
+                  radiusInMiles:12500  // 1/2 earth circumference
               completionHandler:
    ^(NSArray<GammaCasino *> *_Nullable casinos, NSError *_Nullable error) {
      dispatch_async(dispatch_get_main_queue(), ^{
-       self.casinoListViewController.casinos = casinos;
+       [self.store updateCasinosFromGammaCasinos:casinos];
+       [self.store save:nil];
+       NSLog(@"Casinos updated.");
      });
   }];
 }

@@ -1,27 +1,54 @@
 #import "CasinoList/CasinoListTableViewController.h"
 
-#import "GammaAPI/Model/GammaCasino.h"
+#import <SafariServices/SFSafariViewController.h>
 
-#warning remove these
+#import "Model/Objects/Casino.h"
 #import "Model/Store.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CasinoListTableViewController ()
+static NSString *const kBravoPokerCasinoPageURLString = @"https://www.bravopokerlive.com/venues/%@";
+
+@interface CasinoListTableViewController () <NSFetchedResultsControllerDelegate>
+@property(nonatomic) Store *store;
+@property(nonatomic) NSFetchedResultsController *resultsController;
+@property(nonatomic, readonly) NSArray<Casino *> *casinos;
 @end
 
 @implementation CasinoListTableViewController
 
-+ (instancetype)casinoListWithCasinos:(nullable NSArray<GammaCasino *> *)casinos {
++ (instancetype)casinoListWithStore:(Store *)store {
   CasinoListTableViewController *casinoList =
-      [[CasinoListTableViewController alloc] initWithStyle:UITableViewStylePlain];
-  casinoList.casinos = casinos;
+      [[CasinoListTableViewController alloc] initWithStyle:UITableViewStylePlain store:store];
   return casinoList;
+}
+
+- (instancetype)initWithStyle:(UITableViewStyle)style store:(Store *)store {
+  if (self = [super initWithStyle:style]) {
+    _store = store;
+    NSFetchRequest *request = [_store casinoFetchRequest];
+    _resultsController = [_store resultsControllerWithRequest:request];
+    _resultsController.delegate = self;
+  }
+  return self;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"identifier"];
+}
+
+- (NSArray<Casino *> *)casinos {
+  if (_resultsController.fetchedObjects == nil) {
+    NSError *fetchError = nil;
+    [_resultsController performFetch:&fetchError];
+    NSAssert(!fetchError, @"Error attempting to perform fetch: %@", fetchError);
+  }
+  return _resultsController.fetchedObjects;
+}
+
+- (Casino *)casinoAtIndexPath:(NSIndexPath *)indexPath {
+  return self.casinos[indexPath.row];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -31,24 +58,27 @@ NS_ASSUME_NONNULL_BEGIN
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier"];
-  cell.textLabel.text = self.casinos[indexPath.row].shortName;
+  cell.textLabel.text = [self casinoAtIndexPath:indexPath].name;
   return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  Store *store = [[Store alloc] init];
-  (void)[store insertCasinoFromGammaCasino:self.casinos[indexPath.row]];
-  NSError *error = nil;
-  [store save:&error];
-  NSAssert(!error, @"");
+  // ballys-las-vegas/
+  Casino *casino = [self casinoAtIndexPath:indexPath];
+  NSCharacterSet *charactersToRemove = [[NSCharacterSet URLPathAllowedCharacterSet] invertedSet];
+  NSString *casinoName = [casino.name stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+  casinoName = [casinoName stringByReplacingOccurrencesOfString:@"'" withString:@""];
+  NSString *urlSafe =
+      [[[casinoName componentsSeparatedByCharactersInSet:charactersToRemove]
+          componentsJoinedByString:@""] lowercaseString];
+  NSURL *URL =
+      [NSURL URLWithString:[NSString stringWithFormat:kBravoPokerCasinoPageURLString, urlSafe]];
+  SFSafariViewController *safariView = [[SFSafariViewController alloc] initWithURL:URL];
+  [self presentViewController:safariView animated:YES completion:nil];
 }
 
-- (void)setCasinos:(nullable NSArray<GammaCasino *> *)casinos {
-  if (casinos == _casinos) {
-    return;
-  }
-  _casinos = [casinos copy];
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
   [self.tableView reloadData];
 }
 

@@ -1,14 +1,12 @@
 #import <UIKit/UIKit.h>
 
-@class GammaCasino;
+@class Store;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CasinoListTableViewController : UITableViewController
 
-@property(nonatomic, nullable, copy) NSArray<GammaCasino *> *casinos;
-
-+ (instancetype)casinoListWithCasinos:(nullable NSArray<GammaCasino *> *)casinos;
++ (instancetype)casinoListWithStore:(Store *)store;
 
 @end
 
