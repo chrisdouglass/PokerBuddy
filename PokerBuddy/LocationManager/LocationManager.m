@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
                                    delegate:(nullable id<LocationManagerDelegate>)delegate {
   if (self = [super init]) {
     _coreLocationManager = coreLocationMonitor;
+    _coreLocationManager.distanceFilter = 100;  // 100 meters
     _coreLocationManager.delegate = self;
     _locationManagerDelegate = delegate;
 
@@ -44,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
       break;
     case kCLAuthorizationStatusAuthorizedAlways:
     case kCLAuthorizationStatusAuthorizedWhenInUse:
-      [self updateLocation];
+      [self.coreLocationManager startUpdatingLocation];
       break;
   }
 }
@@ -61,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
       break;
     case kCLAuthorizationStatusAuthorizedAlways:
     case kCLAuthorizationStatusAuthorizedWhenInUse:
-      [self updateLocation];
+      [self.coreLocationManager startUpdatingLocation];
       break;
     case kCLAuthorizationStatusNotDetermined:
       break;
@@ -87,10 +88,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (double)currentLongitude {
   return self.currentLocation.coordinate.longitude;
-}
-
-- (void)updateLocation {
-  [self.coreLocationManager requestLocation];
 }
 
 @end

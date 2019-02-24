@@ -5,6 +5,7 @@
 #import "Model/Store.h"
 
 #warning remove this
+#import <CRToast/CRToast.h>
 #import "GammaAPIController.h"
 #import "GammaCasino.h"
 
@@ -60,6 +61,11 @@ NS_ASSUME_NONNULL_BEGIN
        [self.store updateCasinosFromGammaCasinos:casinos];
        [self.store save:nil];
        NSLog(@"Casinos updated.");
+       [CRToastManager setDefaultOptions:@{
+         kCRToastBackgroundColorKey :
+             [UIColor colorWithRed:20.f/255.f green:56.f/255.f blue:30.f/255.f alpha:1.f],
+       }];
+       [CRToastManager showNotificationWithMessage:@"Casinos updated." completionBlock:nil];
      });
   }];
 }

@@ -2,6 +2,8 @@
 
 #import <SafariServices/SFSafariViewController.h>
 
+#import "Shared/HSTableViewCells.h"
+
 #import "Model/Objects/Casino.h"
 #import "Model/Store.h"
 
@@ -35,7 +37,7 @@ static NSString *const kBravoPokerCasinoPageURLString = @"https://www.bravopoker
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"identifier"];
+  [self.tableView registerClass:[HSTwoValueCell class] forCellReuseIdentifier:@"identifier"];
 }
 
 - (NSArray<Casino *> *)casinos {
@@ -57,8 +59,10 @@ static NSString *const kBravoPokerCasinoPageURLString = @"https://www.bravopoker
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier"];
-  cell.textLabel.text = [self casinoAtIndexPath:indexPath].name;
+  HSTwoValueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier"];
+  Casino *casino = [self casinoAtIndexPath:indexPath];
+  cell.textLabel.text = casino.name;
+  cell.valueLabel.text = [NSString stringWithFormat:@"%.f mi", casino.lastDistance];
   return cell;
 }
 

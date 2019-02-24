@@ -23,8 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) double currentLatitude;
 @property(nonatomic, readonly) double currentLongitude;
 
-- (void)updateLocation;
-
 @end
 
 NS_ASSUME_NONNULL_END
