@@ -35,9 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
     _distance =
         [[[self class] objectForKey:@"distance" inJSONDictionary:jsonDictionary] doubleValue];
     _latitiude =
-        [[[self class] objectForKey:@"latitude" inJSONDictionary:jsonDictionary] doubleValue];
+        [[[self class] objectForKey:@"lat" inJSONDictionary:jsonDictionary] doubleValue];
     _longitude =
-        [[[self class] objectForKey:@"longitude" inJSONDictionary:jsonDictionary] doubleValue];
+        [[[self class] objectForKey:@"lng" inJSONDictionary:jsonDictionary] doubleValue];
 
     _smallImageURL = [[[self class] objectForKey:@"smallURL" inJSONDictionary:jsonDictionary] copy];
     _mediumImageURL =

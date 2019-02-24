@@ -8,6 +8,14 @@ static NSString * const kGetCasinoDetailByIDURL =
     @"https://bravopokerlive.appspot.com/service/getcasinodetailbyid";
 static NSString * const kGetCasinosByLocationURL =
     @"https://bravopokerlive.appspot.com/service/getcasinolistbylocation";
+// The UFPRT (Umbraco Form Post RouTe) is an opaque value needed for login.
+static NSString * const kUFPRT = @"6D0DA25E87A10582E385368441A5D7597E0794D8D255318AA044197B8E3C98CB"
+    @"168F8EFC3E86AE85729D962CEC1778238AE5072C6012D7EAC974765AB1A6EF70386E3F85B55085564927B8C95D053"
+    @"D739B08151E1726075C490036B42E13222FDC81E728D5639CD6E02FBF79A10F7D8479C2866E3C474759DBA2305B40"
+    @"57F028";
+static NSString * const kLoginURL = @"https://www.bravopokerlive.com/login/";
+static NSString * const kLoginReturnUrl = @"/venues/";
+
 // https://bravopokerlive.appspot.com/service/getdailytournamentlistbycasinoid
 // https://bravopokerlive.appspot.com/service/getclocksbycasinoid
 // https://bravopokerlive.appspot.com/service/getgamelist
@@ -18,6 +26,40 @@ static NSString * const kGetCasinosByLocationURL =
 @end
 
 @implementation GammaAPIController
+
+- (void)loginWithEmail:(NSString *)email
+              password:(NSString *)password
+     completionHandler:(void (^)(NSError *_Nullable error))completionHandler {
+  NSString *boundary = [[self class] boundaryString];
+  NSDictionary *params = @{
+    @"Email" : email,
+    @"Password" : password,
+    @"ufprt" : kUFPRT,
+    @"ReturnUrl" : kLoginReturnUrl,
+  };
+
+  NSURL *url = [NSURL URLWithString:kLoginURL];
+  NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+  [request setHTTPMethod:@"POST"];
+
+  NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+  [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
+
+  NSData *httpBody = [[self class] createBodyWithBoundary:boundary parameters:params];
+
+  NSURLSession *session = [NSURLSession sharedSession];
+  NSURLSessionTask *task = [session uploadTaskWithRequest:request
+                                                 fromData:httpBody
+                                        completionHandler:
+    ^(NSData *data, NSURLResponse *response, NSError *error) {
+      if (error) {
+        completionHandler(error);
+        return;
+      }
+      completionHandler(nil);
+  }];
+  [task resume];
+}
 
 - (void)casinoForID:(NSString *)casinoID
     completionHandler:(void(^)(GammaCasino *_Nullable, NSError *_Nullable))completionHandler {
@@ -104,6 +146,8 @@ static NSString * const kGetCasinosByLocationURL =
 // curl -H 'Host: bravopokerlive.appspot.com' -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' -H 'Accept-Language: en-us' -H 'Accept: */*' -H 'User-Agent: Appcelerator Titanium/5.5.2 (iPhone/12.1.4; iPhone OS; en_US;)' -H 'X-Titanium-Id: 90bfcd89-bd49-4fc7-9999-5d5119a722e8' -H 'X-Requested-With: XMLHttpRequest' --data-binary "max=%2A&min=%2A&lat=37.32043075561523&lon=-121.9350662231445&desc=%2A&mile=10000" --compressed 'https://bravopokerlive.appspot.com/service/getcasinolistbygame'
 }
 
+#pragma mark - Private
+
 + (NSURLRequest *)postRequestForURLString:(NSString *)string postString:(NSString *)postString {
   NSData *postData = [postString dataUsingEncoding:NSUTF8StringEncoding];
   NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
@@ -114,6 +158,32 @@ static NSString * const kGetCasinosByLocationURL =
   [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
   [request setHTTPBody:postData];
   return request;
+}
+
++ (NSData *)createBodyWithBoundary:(NSString *)boundary
+                        parameters:(NSDictionary *)parameters {
+  NSMutableData *httpBody = [NSMutableData data];
+  [parameters enumerateKeysAndObjectsUsingBlock:
+      ^(NSString *parameterKey, NSString *parameterValue, BOOL *stop) {
+        NSString *boundaryString = [NSString stringWithFormat:@"--%@\r\n", boundary];
+        [httpBody appendData:[boundaryString dataUsingEncoding:NSUTF8StringEncoding]];
+
+        NSString *contentDispositionString =
+        [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",
+         parameterKey];
+        [httpBody appendData:[contentDispositionString dataUsingEncoding:NSUTF8StringEncoding]];
+
+        NSString *paramString = [NSString stringWithFormat:@"%@\r\n", parameterValue];
+        [httpBody appendData:[paramString dataUsingEncoding:NSUTF8StringEncoding]];
+      }];
+
+  NSString *endBoundary = [NSString stringWithFormat:@"--%@--\r\n", boundary];
+  [httpBody appendData:[endBoundary dataUsingEncoding:NSUTF8StringEncoding]];
+  return httpBody;
+}
+
++ (NSString *)boundaryString {
+  return [NSString stringWithFormat:@"Boundary-%@", [[NSUUID UUID] UUIDString]];
 }
 
 @end

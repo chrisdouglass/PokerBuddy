@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) BOOL liveGamePit;
 @property(nonatomic) BOOL liveGamePoker;
 @property(nonatomic) double distance;
-@property(nonatomic) double latitiude;
-@property(nonatomic) double longitude;
+@property(nonatomic) double latitiude;  // json:lat
+@property(nonatomic) double longitude;  // json:lng
 @property(nonatomic, copy, nullable) NSURL *smallImageURL;  // json:smallURL
 @property(nonatomic, copy, nullable) NSURL *mediumImageURL; // json:medURL
 @property(nonatomic, copy, nullable) NSURL *largeImageURL;  // json:largURL

@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GammaAPIController : NSObject
 
+- (void)loginWithEmail:(NSString *)email
+              password:(NSString *)password
+     completionHandler:(void (^)(NSError *_Nullable error))completionHandler;
+
 - (void)casinoForID:(NSString *)casinoID
     completionHandler:(void(^)(GammaCasino *_Nullable, NSError *_Nullable))completionHandler;
 

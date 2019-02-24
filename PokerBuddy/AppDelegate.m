@@ -1,9 +1,10 @@
 #import "AppDelegate.h"
 
-#import "RootTabBarController.h"
+#import "LocationManager/LocationManager.h"
+#import "RootTabBarController/RootTabBarController.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <LocationManagerDelegate>
+@property(nonatomic, readonly) LocationManager *locationManager;
 @end
 
 @implementation AppDelegate
@@ -15,7 +16,12 @@
   self.window.rootViewController = rootTabView;
   [self.window makeKeyAndVisible];
 
+  _locationManager = [LocationManager locationManagerWithDelegate:self];
   return YES;
+}
+
+- (void)locationManagerDidUpdateLocation:(LocationManager *)locationManager {
+  NSLog(@"location: %@", locationManager.currentLocation);
 }
 
 @end
