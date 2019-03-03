@@ -8,6 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		0ED6B339AACBACDF13AB26CE /* libPods-PokerBuddy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2247877774A51316FBF17A /* libPods-PokerBuddy.a */; };
+		4C3C2789222B59F600B7C779 /* CardConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2777222B59F500B7C779 /* CardConverter.cpp */; };
+		4C3C278A222B59F600B7C779 /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2778222B59F500B7C779 /* Card.cpp */; };
+		4C3C278B222B59F600B7C779 /* OmahaHandDistribution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C277A222B59F500B7C779 /* OmahaHandDistribution.cpp */; };
+		4C3C278C222B59F600B7C779 /* HoldemHandDistribution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C277D222B59F500B7C779 /* HoldemHandDistribution.cpp */; };
+		4C3C278D222B59F600B7C779 /* HoldemCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C277F222B59F500B7C779 /* HoldemCalculator.cpp */; };
+		4C3C278E222B59F600B7C779 /* mtrand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2780222B59F500B7C779 /* mtrand.cpp */; };
+		4C3C278F222B59F600B7C779 /* OmahaAgnosticHand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2784222B59F600B7C779 /* OmahaAgnosticHand.cpp */; };
+		4C3C2790222B59F600B7C779 /* OmahaCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2786222B59F600B7C779 /* OmahaCalculator.cpp */; };
+		4C3C2791222B59F600B7C779 /* HoldemAgnosticHand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2788222B59F600B7C779 /* HoldemAgnosticHand.cpp */; };
+		4C3C2807222B5D0200B7C779 /* lowball.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2793222B5D0200B7C779 /* lowball.c */; };
+		4C3C2808222B5D0200B7C779 /* mktab_evx.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2794222B5D0200B7C779 /* mktab_evx.c */; };
+		4C3C2809222B5D0200B7C779 /* rules_astud.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2795222B5D0200B7C779 /* rules_astud.c */; };
+		4C3C280A222B5D0200B7C779 /* mktab_packed.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2796222B5D0200B7C779 /* mktab_packed.c */; };
+		4C3C280B222B5D0200B7C779 /* mktab_astud.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2797222B5D0200B7C779 /* mktab_astud.c */; };
+		4C3C280C222B5D0200B7C779 /* deck_astud.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2799222B5D0200B7C779 /* deck_astud.c */; };
+		4C3C280D222B5D0200B7C779 /* mktab_joker.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279A222B5D0200B7C779 /* mktab_joker.c */; };
+		4C3C280E222B5D0200B7C779 /* rules_joker.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279B222B5D0200B7C779 /* rules_joker.c */; };
+		4C3C280F222B5D0200B7C779 /* poker_wrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279C222B5D0200B7C779 /* poker_wrapper.c */; };
+		4C3C2810222B5D0200B7C779 /* mktab_basic.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279D222B5D0200B7C779 /* mktab_basic.c */; };
+		4C3C2811222B5D0200B7C779 /* combinations.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279E222B5D0200B7C779 /* combinations.c */; };
+		4C3C2812222B5D0200B7C779 /* deck_joker.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279F222B5D0200B7C779 /* deck_joker.c */; };
+		4C3C2813222B5D0200B7C779 /* evx.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A0222B5D0200B7C779 /* evx.c */; };
+		4C3C2814222B5D0200B7C779 /* deck.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A1222B5D0200B7C779 /* deck.c */; };
+		4C3C2815222B5D0200B7C779 /* mktable_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A2222B5D0200B7C779 /* mktable_utils.c */; };
+		4C3C2816222B5D0200B7C779 /* enumerate.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A3222B5D0200B7C779 /* enumerate.c */; };
+		4C3C2817222B5D0200B7C779 /* mktable.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A4222B5D0200B7C779 /* mktable.c */; };
+		4C3C2818222B5D0200B7C779 /* evx_generate.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A5222B5D0200B7C779 /* evx_generate.c */; };
+		4C3C2819222B5D0200B7C779 /* rules_std.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A6222B5D0200B7C779 /* rules_std.c */; };
+		4C3C281A222B5D0200B7C779 /* mktab_lowball.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A7222B5D0200B7C779 /* mktab_lowball.c */; };
+		4C3C281B222B5D0200B7C779 /* enumord.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27D4222B5D0200B7C779 /* enumord.c */; };
+		4C3C281C222B5D0200B7C779 /* deck_std.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27D5222B5D0200B7C779 /* deck_std.c */; };
+		4C3C2820222B60EA00B7C779 /* HoldemEquityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C281E222B60EA00B7C779 /* HoldemEquityTest.cpp */; };
+		4C3C2821222B60EA00B7C779 /* OmahaEquityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C281F222B60EA00B7C779 /* OmahaEquityTest.cpp */; };
+		4C3C2822222B62C100B7C779 /* libpoker-eval.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C276D222B59CD00B7C779 /* libpoker-eval.a */; };
+		4C3C2826222B639100B7C779 /* PokerHoldemCalculator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2825222B639100B7C779 /* PokerHoldemCalculator.mm */; };
+		4C3C2827222B659C00B7C779 /* libhand-dist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C2760222B59C400B7C779 /* libhand-dist.a */; };
+		4C3C2834222B688700B7C779 /* mktab_basic.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279D222B5D0200B7C779 /* mktab_basic.c */; };
+		4C3C283E222B697C00B7C779 /* mktable_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A2222B5D0200B7C779 /* mktable_utils.c */; };
+		4C3C283F222B697C00B7C779 /* mktable.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A4222B5D0200B7C779 /* mktable.c */; };
+		4C4C7B0C222B6B4F009F1C84 /* t_maskrank.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B03222B6B4E009F1C84 /* t_maskrank.c */; };
+		4C4C7B0D222B6B4F009F1C84 /* t_cardmasks.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B04222B6B4E009F1C84 /* t_cardmasks.c */; };
+		4C4C7B0E222B6B4F009F1C84 /* t_topbit.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B05222B6B4E009F1C84 /* t_topbit.c */; };
+		4C4C7B0F222B6B4F009F1C84 /* t_toptwobits.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B06222B6B4E009F1C84 /* t_toptwobits.c */; };
+		4C4C7B10222B6B4F009F1C84 /* t_topcard.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B07222B6B4E009F1C84 /* t_topcard.c */; };
+		4C4C7B11222B6B4F009F1C84 /* t_straight.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B08222B6B4E009F1C84 /* t_straight.c */; };
+		4C4C7B12222B6B4F009F1C84 /* t_nbits.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B09222B6B4E009F1C84 /* t_nbits.c */; };
+		4C4C7B13222B6B4F009F1C84 /* t_topfivebits.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B0A222B6B4E009F1C84 /* t_topfivebits.c */; };
+		4C4C7B14222B6B4F009F1C84 /* t_topfivecards.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B0B222B6B4E009F1C84 /* t_topfivecards.c */; };
 		4C7CCDDD221D364E001E74FA /* CasinoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */; };
 		4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */; };
 		4C7CCDE5221D46B0001E74FA /* holdem_hands_sorted_ev.new.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE4221D46AF001E74FA /* holdem_hands_sorted_ev.new.txt */; };
@@ -22,6 +70,7 @@
 		4C7CCE0922215408001E74FA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7CCE0822215408001E74FA /* CoreData.framework */; };
 		4C7CCE0D22226A0E001E74FA /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCE0C22226A0E001E74FA /* LocationManager.m */; };
 		4C7CCE132222A963001E74FA /* HSTableViewCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCE112222A963001E74FA /* HSTableViewCells.m */; };
+		4C7CCE17222315E8001E74FA /* ToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCE16222315E8001E74FA /* ToastManager.m */; };
 		4CA4DB30221777A800E8A050 /* holdem_hands_sorted_alpha.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */; };
 		4CA4DB342217823500E8A050 /* RangeExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */; };
 		4CA4DB38221B6F4700E8A050 /* GammaAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA4DB37221B6F4700E8A050 /* GammaAPIController.m */; };
@@ -40,7 +89,185 @@
 		A4D171DD22175C8A004922C1 /* holdem_hands_sorted_ev.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4D171DB22175C8A004922C1 /* holdem_hands_sorted_ev.txt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C3C275E222B59C400B7C779 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3C276B222B59CD00B7C779 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3C282B222B686500B7C779 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4C3C2760222B59C400B7C779 /* libhand-dist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libhand-dist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3C276D222B59CD00B7C779 /* libpoker-eval.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libpoker-eval.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3C2776222B59F500B7C779 /* OmahaHandDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmahaHandDistribution.h; sourceTree = "<group>"; };
+		4C3C2777222B59F500B7C779 /* CardConverter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardConverter.cpp; sourceTree = "<group>"; };
+		4C3C2778222B59F500B7C779 /* Card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Card.cpp; sourceTree = "<group>"; };
+		4C3C2779222B59F500B7C779 /* OmahaCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmahaCalculator.h; sourceTree = "<group>"; };
+		4C3C277A222B59F500B7C779 /* OmahaHandDistribution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OmahaHandDistribution.cpp; sourceTree = "<group>"; };
+		4C3C277B222B59F500B7C779 /* HandDistributions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandDistributions.h; sourceTree = "<group>"; };
+		4C3C277C222B59F500B7C779 /* HoldemCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldemCalculator.h; sourceTree = "<group>"; };
+		4C3C277D222B59F500B7C779 /* HoldemHandDistribution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HoldemHandDistribution.cpp; sourceTree = "<group>"; };
+		4C3C277E222B59F500B7C779 /* CardConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardConverter.h; sourceTree = "<group>"; };
+		4C3C277F222B59F500B7C779 /* HoldemCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HoldemCalculator.cpp; sourceTree = "<group>"; };
+		4C3C2780222B59F500B7C779 /* mtrand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mtrand.cpp; sourceTree = "<group>"; };
+		4C3C2781222B59F500B7C779 /* HoldemAgnosticHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldemAgnosticHand.h; sourceTree = "<group>"; };
+		4C3C2782222B59F500B7C779 /* mtrand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtrand.h; sourceTree = "<group>"; };
+		4C3C2783222B59F500B7C779 /* HoldemHandDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldemHandDistribution.h; sourceTree = "<group>"; };
+		4C3C2784222B59F600B7C779 /* OmahaAgnosticHand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OmahaAgnosticHand.cpp; sourceTree = "<group>"; };
+		4C3C2785222B59F600B7C779 /* OmahaAgnosticHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmahaAgnosticHand.h; sourceTree = "<group>"; };
+		4C3C2786222B59F600B7C779 /* OmahaCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OmahaCalculator.cpp; sourceTree = "<group>"; };
+		4C3C2787222B59F600B7C779 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		4C3C2788222B59F600B7C779 /* HoldemAgnosticHand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HoldemAgnosticHand.cpp; sourceTree = "<group>"; };
+		4C3C2793222B5D0200B7C779 /* lowball.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lowball.c; sourceTree = "<group>"; };
+		4C3C2794222B5D0200B7C779 /* mktab_evx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktab_evx.c; sourceTree = "<group>"; };
+		4C3C2795222B5D0200B7C779 /* rules_astud.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rules_astud.c; sourceTree = "<group>"; };
+		4C3C2796222B5D0200B7C779 /* mktab_packed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktab_packed.c; sourceTree = "<group>"; };
+		4C3C2797222B5D0200B7C779 /* mktab_astud.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktab_astud.c; sourceTree = "<group>"; };
+		4C3C2798222B5D0200B7C779 /* mktable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mktable.h; sourceTree = "<group>"; };
+		4C3C2799222B5D0200B7C779 /* deck_astud.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deck_astud.c; sourceTree = "<group>"; };
+		4C3C279A222B5D0200B7C779 /* mktab_joker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktab_joker.c; sourceTree = "<group>"; };
+		4C3C279B222B5D0200B7C779 /* rules_joker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rules_joker.c; sourceTree = "<group>"; };
+		4C3C279C222B5D0200B7C779 /* poker_wrapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = poker_wrapper.c; sourceTree = "<group>"; };
+		4C3C279D222B5D0200B7C779 /* mktab_basic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktab_basic.c; sourceTree = "<group>"; };
+		4C3C279E222B5D0200B7C779 /* combinations.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = combinations.c; sourceTree = "<group>"; };
+		4C3C279F222B5D0200B7C779 /* deck_joker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deck_joker.c; sourceTree = "<group>"; };
+		4C3C27A0222B5D0200B7C779 /* evx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = evx.c; sourceTree = "<group>"; };
+		4C3C27A1222B5D0200B7C779 /* deck.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deck.c; sourceTree = "<group>"; };
+		4C3C27A2222B5D0200B7C779 /* mktable_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktable_utils.c; sourceTree = "<group>"; };
+		4C3C27A3222B5D0200B7C779 /* enumerate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = enumerate.c; sourceTree = "<group>"; };
+		4C3C27A4222B5D0200B7C779 /* mktable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktable.c; sourceTree = "<group>"; };
+		4C3C27A5222B5D0200B7C779 /* evx_generate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = evx_generate.c; sourceTree = "<group>"; };
+		4C3C27A6222B5D0200B7C779 /* rules_std.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rules_std.c; sourceTree = "<group>"; };
+		4C3C27A7222B5D0200B7C779 /* mktab_lowball.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mktab_lowball.c; sourceTree = "<group>"; };
+		4C3C27A9222B5D0200B7C779 /* libpoker_eval_la-lowball.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-lowball.Plo"; sourceTree = "<group>"; };
+		4C3C27AA222B5D0200B7C779 /* libpoker_eval_la-deck_astud.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-deck_astud.Plo"; sourceTree = "<group>"; };
+		4C3C27AB222B5D0200B7C779 /* mktab_lowball.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktab_lowball.Po; sourceTree = "<group>"; };
+		4C3C27AC222B5D0200B7C779 /* mktable.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktable.Po; sourceTree = "<group>"; };
+		4C3C27AD222B5D0200B7C779 /* libpoker_eval_la-t_botfivecards.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_botfivecards.Plo"; sourceTree = "<group>"; };
+		4C3C27AE222B5D0200B7C779 /* libpoker_eval_la-enumerate.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-enumerate.Plo"; sourceTree = "<group>"; };
+		4C3C27AF222B5D0200B7C779 /* libpoker_eval_la-enumord.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-enumord.Plo"; sourceTree = "<group>"; };
+		4C3C27B0222B5D0200B7C779 /* libpoker_eval_la-t_topfivebits.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_topfivebits.Plo"; sourceTree = "<group>"; };
+		4C3C27B1222B5D0200B7C779 /* libpoker_eval_la-t_botfivecardsj.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_botfivecardsj.Plo"; sourceTree = "<group>"; };
+		4C3C27B2222B5D0200B7C779 /* libpoker_eval_la-deck.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-deck.Plo"; sourceTree = "<group>"; };
+		4C3C27B3222B5D0200B7C779 /* libpoker_eval_la-t_evx_pairval.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_evx_pairval.Plo"; sourceTree = "<group>"; };
+		4C3C27B4222B5D0200B7C779 /* libpoker_eval_la-t_evx_flushcards.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_evx_flushcards.Plo"; sourceTree = "<group>"; };
+		4C3C27B5222B5D0200B7C779 /* libpoker_eval_la-combinations.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-combinations.Plo"; sourceTree = "<group>"; };
+		4C3C27B6222B5D0200B7C779 /* libpoker_eval_la-t_jokercardmasks.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_jokercardmasks.Plo"; sourceTree = "<group>"; };
+		4C3C27B7222B5D0200B7C779 /* libpoker_eval_la-t_evx_strval.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_evx_strval.Plo"; sourceTree = "<group>"; };
+		4C3C27B8222B5D0200B7C779 /* libpoker_eval_la-poker_wrapper.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-poker_wrapper.Plo"; sourceTree = "<group>"; };
+		4C3C27B9222B5D0200B7C779 /* evx_gen5-evx_generate.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "evx_gen5-evx_generate.Po"; sourceTree = "<group>"; };
+		4C3C27BA222B5D0200B7C779 /* libpoker_eval_la-t_nbitsandstr.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_nbitsandstr.Plo"; sourceTree = "<group>"; };
+		4C3C27BB222B5D0200B7C779 /* libpoker_eval_la-t_nbits.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_nbits.Plo"; sourceTree = "<group>"; };
+		4C3C27BC222B5D0200B7C779 /* libpoker_eval_la-t_topfivecards.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_topfivecards.Plo"; sourceTree = "<group>"; };
+		4C3C27BD222B5D0200B7C779 /* libpoker_eval_la-rules_std.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-rules_std.Plo"; sourceTree = "<group>"; };
+		4C3C27BE222B5D0200B7C779 /* mktab_packed.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktab_packed.Po; sourceTree = "<group>"; };
+		4C3C27BF222B5D0200B7C779 /* libpoker_eval_la-rules_astud.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-rules_astud.Plo"; sourceTree = "<group>"; };
+		4C3C27C0222B5D0200B7C779 /* mktab_joker.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktab_joker.Po; sourceTree = "<group>"; };
+		4C3C27C1222B5D0200B7C779 /* libpoker_eval_la-deck_joker.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-deck_joker.Plo"; sourceTree = "<group>"; };
+		4C3C27C2222B5D0200B7C779 /* evx_gen7-evx_generate.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "evx_gen7-evx_generate.Po"; sourceTree = "<group>"; };
+		4C3C27C3222B5D0200B7C779 /* libpoker_eval_la-evx.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-evx.Plo"; sourceTree = "<group>"; };
+		4C3C27C4222B5D0200B7C779 /* libpoker_eval_la-t_topcard.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_topcard.Plo"; sourceTree = "<group>"; };
+		4C3C27C5222B5D0200B7C779 /* mktab_basic.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktab_basic.Po; sourceTree = "<group>"; };
+		4C3C27C6222B5D0200B7C779 /* libpoker_eval_la-t_botcard.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_botcard.Plo"; sourceTree = "<group>"; };
+		4C3C27C7222B5D0200B7C779 /* libpoker_eval_la-t_jokerstraight.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_jokerstraight.Plo"; sourceTree = "<group>"; };
+		4C3C27C8222B5D0200B7C779 /* libpoker_eval_la-t_toptwobits.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_toptwobits.Plo"; sourceTree = "<group>"; };
+		4C3C27C9222B5D0200B7C779 /* libpoker_eval_la-t_topbit.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_topbit.Plo"; sourceTree = "<group>"; };
+		4C3C27CA222B5D0200B7C779 /* libpoker_eval_la-t_maskrank.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_maskrank.Plo"; sourceTree = "<group>"; };
+		4C3C27CB222B5D0200B7C779 /* mktab_evx.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktab_evx.Po; sourceTree = "<group>"; };
+		4C3C27CC222B5D0200B7C779 /* libpoker_eval_la-t_evx_tripsval.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_evx_tripsval.Plo"; sourceTree = "<group>"; };
+		4C3C27CD222B5D0200B7C779 /* mktable_utils.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktable_utils.Po; sourceTree = "<group>"; };
+		4C3C27CE222B5D0200B7C779 /* mktab_astud.Po */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mktab_astud.Po; sourceTree = "<group>"; };
+		4C3C27CF222B5D0200B7C779 /* libpoker_eval_la-deck_std.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-deck_std.Plo"; sourceTree = "<group>"; };
+		4C3C27D0222B5D0200B7C779 /* libpoker_eval_la-rules_joker.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-rules_joker.Plo"; sourceTree = "<group>"; };
+		4C3C27D1222B5D0200B7C779 /* libpoker_eval_la-t_straight.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_straight.Plo"; sourceTree = "<group>"; };
+		4C3C27D2222B5D0200B7C779 /* libpoker_eval_la-t_cardmasks.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_cardmasks.Plo"; sourceTree = "<group>"; };
+		4C3C27D3222B5D0200B7C779 /* libpoker_eval_la-t_astudcardmasks.Plo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libpoker_eval_la-t_astudcardmasks.Plo"; sourceTree = "<group>"; };
+		4C3C27D4222B5D0200B7C779 /* enumord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = enumord.c; sourceTree = "<group>"; };
+		4C3C27D5222B5D0200B7C779 /* deck_std.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deck_std.c; sourceTree = "<group>"; };
+		4C3C27D6222B5D0200B7C779 /* .cvsignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .cvsignore; sourceTree = "<group>"; };
+		4C3C27D7222B5D0200B7C779 /* evx_preamble.cfrag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = evx_preamble.cfrag; sourceTree = "<group>"; };
+		4C3C27D9222B5D0200B7C779 /* pokereval_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pokereval_export.h; sourceTree = "<group>"; };
+		4C3C27DA222B5D0200B7C779 /* handval_low.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = handval_low.h; sourceTree = "<group>"; };
+		4C3C27DB222B5D0200B7C779 /* deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deck.h; sourceTree = "<group>"; };
+		4C3C27DC222B5D0200B7C779 /* md5c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5c.h; sourceTree = "<group>"; };
+		4C3C27DD222B5D0200B7C779 /* enumerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enumerate.h; sourceTree = "<group>"; };
+		4C3C27DE222B5D0200B7C779 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		4C3C27DF222B5D0200B7C779 /* poker_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poker_config.h; sourceTree = "<group>"; };
+		4C3C27E0222B5D0200B7C779 /* enumord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enumord.h; sourceTree = "<group>"; };
+		4C3C27E1222B5D0200B7C779 /* stamp-h1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "stamp-h1"; sourceTree = "<group>"; };
+		4C3C27E2222B5D0200B7C779 /* evx_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evx_defs.h; sourceTree = "<group>"; };
+		4C3C27E3222B5D0200B7C779 /* rules_std.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rules_std.h; sourceTree = "<group>"; };
+		4C3C27E4222B5D0200B7C779 /* config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		4C3C27E5222B5D0200B7C779 /* deck_std.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deck_std.h; sourceTree = "<group>"; };
+		4C3C27E6222B5D0200B7C779 /* poker_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poker_defs.h; sourceTree = "<group>"; };
+		4C3C27E8222B5D0200B7C779 /* omahalow8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = omahalow8.h; sourceTree = "<group>"; };
+		4C3C27E9222B5D0200B7C779 /* eval_astud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_astud.h; sourceTree = "<group>"; };
+		4C3C27EA222B5D0200B7C779 /* eval_joker_low.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_joker_low.h; sourceTree = "<group>"; };
+		4C3C27EB222B5D0200B7C779 /* eval_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_type.h; sourceTree = "<group>"; };
+		4C3C27EC222B5D0200B7C779 /* evx_action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evx_action.h; sourceTree = "<group>"; };
+		4C3C27ED222B5D0200B7C779 /* eval_joker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_joker.h; sourceTree = "<group>"; };
+		4C3C27EE222B5D0200B7C779 /* evx7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evx7.h; sourceTree = "<group>"; };
+		4C3C27EF222B5D0200B7C779 /* eval_low.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_low.h; sourceTree = "<group>"; };
+		4C3C27F0222B5D0200B7C779 /* eval_omaha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_omaha.h; sourceTree = "<group>"; };
+		4C3C27F1222B5D0200B7C779 /* eval_low8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_low8.h; sourceTree = "<group>"; };
+		4C3C27F2222B5D0200B7C779 /* eval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval.h; sourceTree = "<group>"; };
+		4C3C27F3222B5D0200B7C779 /* eval_joker_low8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_joker_low8.h; sourceTree = "<group>"; };
+		4C3C27F4222B5D0200B7C779 /* evx_inlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evx_inlines.h; sourceTree = "<group>"; };
+		4C3C27F5222B5D0200B7C779 /* omahahi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = omahahi.h; sourceTree = "<group>"; };
+		4C3C27F6222B5D0200B7C779 /* evx5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evx5.h; sourceTree = "<group>"; };
+		4C3C27F7222B5D0200B7C779 /* eval_low27.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval_low27.h; sourceTree = "<group>"; };
+		4C3C27F8222B5D0200B7C779 /* rules_astud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rules_astud.h; sourceTree = "<group>"; };
+		4C3C27F9222B5D0200B7C779 /* rules_undef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rules_undef.h; sourceTree = "<group>"; };
+		4C3C27FA222B5D0200B7C779 /* enumdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enumdefs.h; sourceTree = "<group>"; };
+		4C3C27FB222B5D0200B7C779 /* handval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = handval.h; sourceTree = "<group>"; };
+		4C3C27FC222B5D0200B7C779 /* game_astud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_astud.h; sourceTree = "<group>"; };
+		4C3C27FD222B5D0200B7C779 /* deck_astud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deck_astud.h; sourceTree = "<group>"; };
+		4C3C27FE222B5D0200B7C779 /* deck_undef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deck_undef.h; sourceTree = "<group>"; };
+		4C3C27FF222B5D0200B7C779 /* poker_config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = poker_config.h.in; sourceTree = "<group>"; };
+		4C3C2800222B5D0200B7C779 /* combinations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = combinations.h; sourceTree = "<group>"; };
+		4C3C2801222B5D0200B7C779 /* game_std.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_std.h; sourceTree = "<group>"; };
+		4C3C2802222B5D0200B7C779 /* poker_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poker_wrapper.h; sourceTree = "<group>"; };
+		4C3C2803222B5D0200B7C779 /* rules_joker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rules_joker.h; sourceTree = "<group>"; };
+		4C3C2804222B5D0200B7C779 /* stamp-h2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "stamp-h2"; sourceTree = "<group>"; };
+		4C3C2805222B5D0200B7C779 /* deck_joker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deck_joker.h; sourceTree = "<group>"; };
+		4C3C2806222B5D0200B7C779 /* game_joker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_joker.h; sourceTree = "<group>"; };
+		4C3C281E222B60EA00B7C779 /* HoldemEquityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HoldemEquityTest.cpp; sourceTree = "<group>"; };
+		4C3C281F222B60EA00B7C779 /* OmahaEquityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OmahaEquityTest.cpp; sourceTree = "<group>"; };
+		4C3C2824222B639100B7C779 /* PokerHoldemCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokerHoldemCalculator.h; sourceTree = "<group>"; };
+		4C3C2825222B639100B7C779 /* PokerHoldemCalculator.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokerHoldemCalculator.mm; sourceTree = "<group>"; };
+		4C3C282D222B686500B7C779 /* generate-poker-tables */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "generate-poker-tables"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4C7B03222B6B4E009F1C84 /* t_maskrank.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_maskrank.c; sourceTree = "<group>"; };
+		4C4C7B04222B6B4E009F1C84 /* t_cardmasks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_cardmasks.c; sourceTree = "<group>"; };
+		4C4C7B05222B6B4E009F1C84 /* t_topbit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_topbit.c; sourceTree = "<group>"; };
+		4C4C7B06222B6B4E009F1C84 /* t_toptwobits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_toptwobits.c; sourceTree = "<group>"; };
+		4C4C7B07222B6B4E009F1C84 /* t_topcard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_topcard.c; sourceTree = "<group>"; };
+		4C4C7B08222B6B4E009F1C84 /* t_straight.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_straight.c; sourceTree = "<group>"; };
+		4C4C7B09222B6B4E009F1C84 /* t_nbits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_nbits.c; sourceTree = "<group>"; };
+		4C4C7B0A222B6B4E009F1C84 /* t_topfivebits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_topfivebits.c; sourceTree = "<group>"; };
+		4C4C7B0B222B6B4E009F1C84 /* t_topfivecards.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_topfivecards.c; sourceTree = "<group>"; };
 		4C7CCDDB221D364E001E74FA /* CasinoListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CasinoListTableViewController.h; sourceTree = "<group>"; };
 		4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CasinoListTableViewController.m; sourceTree = "<group>"; };
 		4C7CCDE1221D3A2C001E74FA /* RootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
@@ -63,6 +290,8 @@
 		4C7CCE0C22226A0E001E74FA /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		4C7CCE112222A963001E74FA /* HSTableViewCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSTableViewCells.m; sourceTree = "<group>"; };
 		4C7CCE122222A963001E74FA /* HSTableViewCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSTableViewCells.h; sourceTree = "<group>"; };
+		4C7CCE15222315E8001E74FA /* ToastManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastManager.h; sourceTree = "<group>"; };
+		4C7CCE16222315E8001E74FA /* ToastManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastManager.m; sourceTree = "<group>"; };
 		4CA4DB2F221777A800E8A050 /* holdem_hands_sorted_alpha.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = holdem_hands_sorted_alpha.txt; sourceTree = "<group>"; };
 		4CA4DB322217823500E8A050 /* RangeExplorerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeExplorerViewController.h; sourceTree = "<group>"; };
 		4CA4DB332217823500E8A050 /* RangeExplorerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RangeExplorerViewController.m; sourceTree = "<group>"; };
@@ -76,6 +305,7 @@
 		4CA4DB41221B79FC00E8A050 /* GammaGameLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GammaGameLimit.m; sourceTree = "<group>"; };
 		4CA4DB43221B7BFA00E8A050 /* GammaTournament.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GammaTournament.h; sourceTree = "<group>"; };
 		4CA4DB44221B7BFA00E8A050 /* GammaTournament.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GammaTournament.m; sourceTree = "<group>"; };
+		4CD9F12D22279A14007F3B9B /* libpoker-eval.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libpoker-eval.a"; path = "PokerBuddy/libpoker-eval.a"; sourceTree = "<group>"; };
 		A4D171B32216225C004922C1 /* PokerBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D171B62216225C004922C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4D171B72216225C004922C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,10 +327,33 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C3C275D222B59C400B7C779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3C2822222B62C100B7C779 /* libpoker-eval.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3C276A222B59CD00B7C779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3C282A222B686500B7C779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D171B02216225C004922C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3C2827222B659C00B7C779 /* libhand-dist.a in Frameworks */,
 				4C7CCDF6221E3DB9001E74FA /* Contacts.framework in Frameworks */,
 				4C7CCE0922215408001E74FA /* CoreData.framework in Frameworks */,
 				4C7CCE0722215402001E74FA /* CoreLocation.framework in Frameworks */,
@@ -119,6 +372,212 @@
 				C791B07936B6B962460B0982 /* Pods-PokerBuddy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C3C2761222B59C400B7C779 /* hand-dist */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C281D222B60EA00B7C779 /* test */,
+				4C3C2778222B59F500B7C779 /* Card.cpp */,
+				4C3C2787222B59F600B7C779 /* Card.h */,
+				4C3C2777222B59F500B7C779 /* CardConverter.cpp */,
+				4C3C277E222B59F500B7C779 /* CardConverter.h */,
+				4C3C277B222B59F500B7C779 /* HandDistributions.h */,
+				4C3C2788222B59F600B7C779 /* HoldemAgnosticHand.cpp */,
+				4C3C2781222B59F500B7C779 /* HoldemAgnosticHand.h */,
+				4C3C277F222B59F500B7C779 /* HoldemCalculator.cpp */,
+				4C3C277C222B59F500B7C779 /* HoldemCalculator.h */,
+				4C3C277D222B59F500B7C779 /* HoldemHandDistribution.cpp */,
+				4C3C2783222B59F500B7C779 /* HoldemHandDistribution.h */,
+				4C3C2780222B59F500B7C779 /* mtrand.cpp */,
+				4C3C2782222B59F500B7C779 /* mtrand.h */,
+				4C3C2784222B59F600B7C779 /* OmahaAgnosticHand.cpp */,
+				4C3C2785222B59F600B7C779 /* OmahaAgnosticHand.h */,
+				4C3C2786222B59F600B7C779 /* OmahaCalculator.cpp */,
+				4C3C2779222B59F500B7C779 /* OmahaCalculator.h */,
+				4C3C277A222B59F500B7C779 /* OmahaHandDistribution.cpp */,
+				4C3C2776222B59F500B7C779 /* OmahaHandDistribution.h */,
+			);
+			path = "hand-dist";
+			sourceTree = "<group>";
+		};
+		4C3C276E222B59CD00B7C779 /* poker-eval */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C27D8222B5D0200B7C779 /* include */,
+				4C3C2792222B5D0200B7C779 /* lib */,
+			);
+			path = "poker-eval";
+			sourceTree = "<group>";
+		};
+		4C3C2792222B5D0200B7C779 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C27D6222B5D0200B7C779 /* .cvsignore */,
+				4C3C27A8222B5D0200B7C779 /* .deps */,
+				4C3C279E222B5D0200B7C779 /* combinations.c */,
+				4C3C2799222B5D0200B7C779 /* deck_astud.c */,
+				4C3C279F222B5D0200B7C779 /* deck_joker.c */,
+				4C3C27D5222B5D0200B7C779 /* deck_std.c */,
+				4C3C27A1222B5D0200B7C779 /* deck.c */,
+				4C3C27A3222B5D0200B7C779 /* enumerate.c */,
+				4C3C27D4222B5D0200B7C779 /* enumord.c */,
+				4C3C27A5222B5D0200B7C779 /* evx_generate.c */,
+				4C3C27D7222B5D0200B7C779 /* evx_preamble.cfrag */,
+				4C3C27A0222B5D0200B7C779 /* evx.c */,
+				4C3C2793222B5D0200B7C779 /* lowball.c */,
+				4C3C2797222B5D0200B7C779 /* mktab_astud.c */,
+				4C3C279D222B5D0200B7C779 /* mktab_basic.c */,
+				4C3C2794222B5D0200B7C779 /* mktab_evx.c */,
+				4C3C279A222B5D0200B7C779 /* mktab_joker.c */,
+				4C3C27A7222B5D0200B7C779 /* mktab_lowball.c */,
+				4C3C2796222B5D0200B7C779 /* mktab_packed.c */,
+				4C3C27A2222B5D0200B7C779 /* mktable_utils.c */,
+				4C3C27A4222B5D0200B7C779 /* mktable.c */,
+				4C3C2798222B5D0200B7C779 /* mktable.h */,
+				4C3C279C222B5D0200B7C779 /* poker_wrapper.c */,
+				4C3C2795222B5D0200B7C779 /* rules_astud.c */,
+				4C3C279B222B5D0200B7C779 /* rules_joker.c */,
+				4C3C27A6222B5D0200B7C779 /* rules_std.c */,
+				4C4C7B04222B6B4E009F1C84 /* t_cardmasks.c */,
+				4C4C7B03222B6B4E009F1C84 /* t_maskrank.c */,
+				4C4C7B09222B6B4E009F1C84 /* t_nbits.c */,
+				4C4C7B08222B6B4E009F1C84 /* t_straight.c */,
+				4C4C7B05222B6B4E009F1C84 /* t_topbit.c */,
+				4C4C7B07222B6B4E009F1C84 /* t_topcard.c */,
+				4C4C7B0A222B6B4E009F1C84 /* t_topfivebits.c */,
+				4C4C7B0B222B6B4E009F1C84 /* t_topfivecards.c */,
+				4C4C7B06222B6B4E009F1C84 /* t_toptwobits.c */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4C3C27A8222B5D0200B7C779 /* .deps */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C27A9222B5D0200B7C779 /* libpoker_eval_la-lowball.Plo */,
+				4C3C27AA222B5D0200B7C779 /* libpoker_eval_la-deck_astud.Plo */,
+				4C3C27AB222B5D0200B7C779 /* mktab_lowball.Po */,
+				4C3C27AC222B5D0200B7C779 /* mktable.Po */,
+				4C3C27AD222B5D0200B7C779 /* libpoker_eval_la-t_botfivecards.Plo */,
+				4C3C27AE222B5D0200B7C779 /* libpoker_eval_la-enumerate.Plo */,
+				4C3C27AF222B5D0200B7C779 /* libpoker_eval_la-enumord.Plo */,
+				4C3C27B0222B5D0200B7C779 /* libpoker_eval_la-t_topfivebits.Plo */,
+				4C3C27B1222B5D0200B7C779 /* libpoker_eval_la-t_botfivecardsj.Plo */,
+				4C3C27B2222B5D0200B7C779 /* libpoker_eval_la-deck.Plo */,
+				4C3C27B3222B5D0200B7C779 /* libpoker_eval_la-t_evx_pairval.Plo */,
+				4C3C27B4222B5D0200B7C779 /* libpoker_eval_la-t_evx_flushcards.Plo */,
+				4C3C27B5222B5D0200B7C779 /* libpoker_eval_la-combinations.Plo */,
+				4C3C27B6222B5D0200B7C779 /* libpoker_eval_la-t_jokercardmasks.Plo */,
+				4C3C27B7222B5D0200B7C779 /* libpoker_eval_la-t_evx_strval.Plo */,
+				4C3C27B8222B5D0200B7C779 /* libpoker_eval_la-poker_wrapper.Plo */,
+				4C3C27B9222B5D0200B7C779 /* evx_gen5-evx_generate.Po */,
+				4C3C27BA222B5D0200B7C779 /* libpoker_eval_la-t_nbitsandstr.Plo */,
+				4C3C27BB222B5D0200B7C779 /* libpoker_eval_la-t_nbits.Plo */,
+				4C3C27BC222B5D0200B7C779 /* libpoker_eval_la-t_topfivecards.Plo */,
+				4C3C27BD222B5D0200B7C779 /* libpoker_eval_la-rules_std.Plo */,
+				4C3C27BE222B5D0200B7C779 /* mktab_packed.Po */,
+				4C3C27BF222B5D0200B7C779 /* libpoker_eval_la-rules_astud.Plo */,
+				4C3C27C0222B5D0200B7C779 /* mktab_joker.Po */,
+				4C3C27C1222B5D0200B7C779 /* libpoker_eval_la-deck_joker.Plo */,
+				4C3C27C2222B5D0200B7C779 /* evx_gen7-evx_generate.Po */,
+				4C3C27C3222B5D0200B7C779 /* libpoker_eval_la-evx.Plo */,
+				4C3C27C4222B5D0200B7C779 /* libpoker_eval_la-t_topcard.Plo */,
+				4C3C27C5222B5D0200B7C779 /* mktab_basic.Po */,
+				4C3C27C6222B5D0200B7C779 /* libpoker_eval_la-t_botcard.Plo */,
+				4C3C27C7222B5D0200B7C779 /* libpoker_eval_la-t_jokerstraight.Plo */,
+				4C3C27C8222B5D0200B7C779 /* libpoker_eval_la-t_toptwobits.Plo */,
+				4C3C27C9222B5D0200B7C779 /* libpoker_eval_la-t_topbit.Plo */,
+				4C3C27CA222B5D0200B7C779 /* libpoker_eval_la-t_maskrank.Plo */,
+				4C3C27CB222B5D0200B7C779 /* mktab_evx.Po */,
+				4C3C27CC222B5D0200B7C779 /* libpoker_eval_la-t_evx_tripsval.Plo */,
+				4C3C27CD222B5D0200B7C779 /* mktable_utils.Po */,
+				4C3C27CE222B5D0200B7C779 /* mktab_astud.Po */,
+				4C3C27CF222B5D0200B7C779 /* libpoker_eval_la-deck_std.Plo */,
+				4C3C27D0222B5D0200B7C779 /* libpoker_eval_la-rules_joker.Plo */,
+				4C3C27D1222B5D0200B7C779 /* libpoker_eval_la-t_straight.Plo */,
+				4C3C27D2222B5D0200B7C779 /* libpoker_eval_la-t_cardmasks.Plo */,
+				4C3C27D3222B5D0200B7C779 /* libpoker_eval_la-t_astudcardmasks.Plo */,
+			);
+			path = .deps;
+			sourceTree = "<group>";
+		};
+		4C3C27D8222B5D0200B7C779 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C27D9222B5D0200B7C779 /* pokereval_export.h */,
+				4C3C27DA222B5D0200B7C779 /* handval_low.h */,
+				4C3C27DB222B5D0200B7C779 /* deck.h */,
+				4C3C27DC222B5D0200B7C779 /* md5c.h */,
+				4C3C27DD222B5D0200B7C779 /* enumerate.h */,
+				4C3C27DE222B5D0200B7C779 /* config.h */,
+				4C3C27DF222B5D0200B7C779 /* poker_config.h */,
+				4C3C27E0222B5D0200B7C779 /* enumord.h */,
+				4C3C27E1222B5D0200B7C779 /* stamp-h1 */,
+				4C3C27E2222B5D0200B7C779 /* evx_defs.h */,
+				4C3C27E3222B5D0200B7C779 /* rules_std.h */,
+				4C3C27E4222B5D0200B7C779 /* config.h.in */,
+				4C3C27E5222B5D0200B7C779 /* deck_std.h */,
+				4C3C27E6222B5D0200B7C779 /* poker_defs.h */,
+				4C3C27E7222B5D0200B7C779 /* inlines */,
+				4C3C27F8222B5D0200B7C779 /* rules_astud.h */,
+				4C3C27F9222B5D0200B7C779 /* rules_undef.h */,
+				4C3C27FA222B5D0200B7C779 /* enumdefs.h */,
+				4C3C27FB222B5D0200B7C779 /* handval.h */,
+				4C3C27FC222B5D0200B7C779 /* game_astud.h */,
+				4C3C27FD222B5D0200B7C779 /* deck_astud.h */,
+				4C3C27FE222B5D0200B7C779 /* deck_undef.h */,
+				4C3C27FF222B5D0200B7C779 /* poker_config.h.in */,
+				4C3C2800222B5D0200B7C779 /* combinations.h */,
+				4C3C2801222B5D0200B7C779 /* game_std.h */,
+				4C3C2802222B5D0200B7C779 /* poker_wrapper.h */,
+				4C3C2803222B5D0200B7C779 /* rules_joker.h */,
+				4C3C2804222B5D0200B7C779 /* stamp-h2 */,
+				4C3C2805222B5D0200B7C779 /* deck_joker.h */,
+				4C3C2806222B5D0200B7C779 /* game_joker.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		4C3C27E7222B5D0200B7C779 /* inlines */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C27E8222B5D0200B7C779 /* omahalow8.h */,
+				4C3C27E9222B5D0200B7C779 /* eval_astud.h */,
+				4C3C27EA222B5D0200B7C779 /* eval_joker_low.h */,
+				4C3C27EB222B5D0200B7C779 /* eval_type.h */,
+				4C3C27EC222B5D0200B7C779 /* evx_action.h */,
+				4C3C27ED222B5D0200B7C779 /* eval_joker.h */,
+				4C3C27EE222B5D0200B7C779 /* evx7.h */,
+				4C3C27EF222B5D0200B7C779 /* eval_low.h */,
+				4C3C27F0222B5D0200B7C779 /* eval_omaha.h */,
+				4C3C27F1222B5D0200B7C779 /* eval_low8.h */,
+				4C3C27F2222B5D0200B7C779 /* eval.h */,
+				4C3C27F3222B5D0200B7C779 /* eval_joker_low8.h */,
+				4C3C27F4222B5D0200B7C779 /* evx_inlines.h */,
+				4C3C27F5222B5D0200B7C779 /* omahahi.h */,
+				4C3C27F6222B5D0200B7C779 /* evx5.h */,
+				4C3C27F7222B5D0200B7C779 /* eval_low27.h */,
+			);
+			path = inlines;
+			sourceTree = "<group>";
+		};
+		4C3C281D222B60EA00B7C779 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C281E222B60EA00B7C779 /* HoldemEquityTest.cpp */,
+				4C3C281F222B60EA00B7C779 /* OmahaEquityTest.cpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		4C3C2823222B636600B7C779 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C2824222B639100B7C779 /* PokerHoldemCalculator.h */,
+				4C3C2825222B639100B7C779 /* PokerHoldemCalculator.mm */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		4C7CCDDA221D362A001E74FA /* CasinoList */ = {
@@ -160,6 +619,7 @@
 		4C7CCDF4221E3DB9001E74FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CD9F12D22279A14007F3B9B /* libpoker-eval.a */,
 				4C7CCE0822215408001E74FA /* CoreData.framework */,
 				4C7CCE0622215402001E74FA /* CoreLocation.framework */,
 				4C7CCE04222153FE001E74FA /* WebKit.framework */,
@@ -187,6 +647,15 @@
 				4C7CCE0C22226A0E001E74FA /* LocationManager.m */,
 			);
 			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		4C7CCE14222315DF001E74FA /* ToastManager */ = {
+			isa = PBXGroup;
+			children = (
+				4C7CCE15222315E8001E74FA /* ToastManager.h */,
+				4C7CCE16222315E8001E74FA /* ToastManager.m */,
+			);
+			path = ToastManager;
 			sourceTree = "<group>";
 		};
 		4CA4DB312217822400E8A050 /* RangeExplorer */ = {
@@ -227,6 +696,8 @@
 			isa = PBXGroup;
 			children = (
 				A4D171B52216225C004922C1 /* PokerBuddy */,
+				4C3C2761222B59C400B7C779 /* hand-dist */,
+				4C3C276E222B59CD00B7C779 /* poker-eval */,
 				A4D171B42216225C004922C1 /* Products */,
 				4C7CCDF4221E3DB9001E74FA /* Frameworks */,
 				1323E35C6E8EC093A649A700 /* Pods */,
@@ -237,6 +708,9 @@
 			isa = PBXGroup;
 			children = (
 				A4D171B32216225C004922C1 /* PokerBuddy.app */,
+				4C3C2760222B59C400B7C779 /* libhand-dist.a */,
+				4C3C276D222B59CD00B7C779 /* libpoker-eval.a */,
+				4C3C282D222B686500B7C779 /* generate-poker-tables */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +718,7 @@
 		A4D171B52216225C004922C1 /* PokerBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4C3C2823222B636600B7C779 /* Calculator */,
 				4C7CCDDA221D362A001E74FA /* CasinoList */,
 				4CA4DB35221B6F2900E8A050 /* GammaAPI */,
 				A4D171CD221634A9004922C1 /* HandChart */,
@@ -252,6 +727,7 @@
 				4CA4DB312217822400E8A050 /* RangeExplorer */,
 				4C7CCDE0221D3A17001E74FA /* RootTabBarController */,
 				4C7CCE0022214F9B001E74FA /* Shared */,
+				4C7CCE14222315DF001E74FA /* ToastManager */,
 				A4D171B62216225C004922C1 /* AppDelegate.h */,
 				A4D171B72216225C004922C1 /* AppDelegate.m */,
 				A4D171BF2216225D004922C1 /* Assets.xcassets */,
@@ -294,6 +770,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C3C275F222B59C400B7C779 /* hand-dist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3C2766222B59C400B7C779 /* Build configuration list for PBXNativeTarget "hand-dist" */;
+			buildPhases = (
+				4C3C275C222B59C400B7C779 /* Sources */,
+				4C3C275D222B59C400B7C779 /* Frameworks */,
+				4C3C275E222B59C400B7C779 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hand-dist";
+			productName = "hand-dist";
+			productReference = 4C3C2760222B59C400B7C779 /* libhand-dist.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4C3C276C222B59CD00B7C779 /* poker-eval */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3C2773222B59CD00B7C779 /* Build configuration list for PBXNativeTarget "poker-eval" */;
+			buildPhases = (
+				4C3C2769222B59CD00B7C779 /* Sources */,
+				4C3C276A222B59CD00B7C779 /* Frameworks */,
+				4C3C276B222B59CD00B7C779 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "poker-eval";
+			productName = "poker-eval";
+			productReference = 4C3C276D222B59CD00B7C779 /* libpoker-eval.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4C3C282C222B686500B7C779 /* generate-poker-tables */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3C2831222B686500B7C779 /* Build configuration list for PBXNativeTarget "generate-poker-tables" */;
+			buildPhases = (
+				4C3C2829222B686500B7C779 /* Sources */,
+				4C3C282A222B686500B7C779 /* Frameworks */,
+				4C3C282B222B686500B7C779 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "generate-poker-tables";
+			productName = "generate-poker-tables";
+			productReference = 4C3C282D222B686500B7C779 /* generate-poker-tables */;
+			productType = "com.apple.product-type.tool";
+		};
 		A4D171B22216225C004922C1 /* PokerBuddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4D171C92216225D004922C1 /* Build configuration list for PBXNativeTarget "PokerBuddy" */;
@@ -323,6 +850,15 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Huskysoft;
 				TargetAttributes = {
+					4C3C275F222B59C400B7C779 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					4C3C276C222B59CD00B7C779 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					4C3C282C222B686500B7C779 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					A4D171B22216225C004922C1 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -342,6 +878,9 @@
 			projectRoot = "";
 			targets = (
 				A4D171B22216225C004922C1 /* PokerBuddy */,
+				4C3C275F222B59C400B7C779 /* hand-dist */,
+				4C3C276C222B59CD00B7C779 /* poker-eval */,
+				4C3C282C222B686500B7C779 /* generate-poker-tables */,
 			);
 		};
 /* End PBXProject section */
@@ -416,11 +955,78 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C3C275C222B59C400B7C779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3C2791222B59F600B7C779 /* HoldemAgnosticHand.cpp in Sources */,
+				4C3C2821222B60EA00B7C779 /* OmahaEquityTest.cpp in Sources */,
+				4C3C278F222B59F600B7C779 /* OmahaAgnosticHand.cpp in Sources */,
+				4C3C278B222B59F600B7C779 /* OmahaHandDistribution.cpp in Sources */,
+				4C3C2820222B60EA00B7C779 /* HoldemEquityTest.cpp in Sources */,
+				4C3C2789222B59F600B7C779 /* CardConverter.cpp in Sources */,
+				4C3C278D222B59F600B7C779 /* HoldemCalculator.cpp in Sources */,
+				4C3C2790222B59F600B7C779 /* OmahaCalculator.cpp in Sources */,
+				4C3C278A222B59F600B7C779 /* Card.cpp in Sources */,
+				4C3C278C222B59F600B7C779 /* HoldemHandDistribution.cpp in Sources */,
+				4C3C278E222B59F600B7C779 /* mtrand.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3C2769222B59CD00B7C779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3C2810222B5D0200B7C779 /* mktab_basic.c in Sources */,
+				4C3C2819222B5D0200B7C779 /* rules_std.c in Sources */,
+				4C4C7B10222B6B4F009F1C84 /* t_topcard.c in Sources */,
+				4C4C7B14222B6B4F009F1C84 /* t_topfivecards.c in Sources */,
+				4C3C281B222B5D0200B7C779 /* enumord.c in Sources */,
+				4C4C7B13222B6B4F009F1C84 /* t_topfivebits.c in Sources */,
+				4C3C2817222B5D0200B7C779 /* mktable.c in Sources */,
+				4C3C2815222B5D0200B7C779 /* mktable_utils.c in Sources */,
+				4C3C2816222B5D0200B7C779 /* enumerate.c in Sources */,
+				4C3C2807222B5D0200B7C779 /* lowball.c in Sources */,
+				4C3C280F222B5D0200B7C779 /* poker_wrapper.c in Sources */,
+				4C3C281A222B5D0200B7C779 /* mktab_lowball.c in Sources */,
+				4C3C280D222B5D0200B7C779 /* mktab_joker.c in Sources */,
+				4C3C281C222B5D0200B7C779 /* deck_std.c in Sources */,
+				4C4C7B0E222B6B4F009F1C84 /* t_topbit.c in Sources */,
+				4C3C280A222B5D0200B7C779 /* mktab_packed.c in Sources */,
+				4C3C280E222B5D0200B7C779 /* rules_joker.c in Sources */,
+				4C3C2808222B5D0200B7C779 /* mktab_evx.c in Sources */,
+				4C3C280B222B5D0200B7C779 /* mktab_astud.c in Sources */,
+				4C3C2813222B5D0200B7C779 /* evx.c in Sources */,
+				4C4C7B0F222B6B4F009F1C84 /* t_toptwobits.c in Sources */,
+				4C3C280C222B5D0200B7C779 /* deck_astud.c in Sources */,
+				4C3C2811222B5D0200B7C779 /* combinations.c in Sources */,
+				4C4C7B0D222B6B4F009F1C84 /* t_cardmasks.c in Sources */,
+				4C4C7B11222B6B4F009F1C84 /* t_straight.c in Sources */,
+				4C4C7B0C222B6B4F009F1C84 /* t_maskrank.c in Sources */,
+				4C3C2812222B5D0200B7C779 /* deck_joker.c in Sources */,
+				4C3C2814222B5D0200B7C779 /* deck.c in Sources */,
+				4C4C7B12222B6B4F009F1C84 /* t_nbits.c in Sources */,
+				4C3C2818222B5D0200B7C779 /* evx_generate.c in Sources */,
+				4C3C2809222B5D0200B7C779 /* rules_astud.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3C2829222B686500B7C779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3C2834222B688700B7C779 /* mktab_basic.c in Sources */,
+				4C3C283E222B697C00B7C779 /* mktable_utils.c in Sources */,
+				4C3C283F222B697C00B7C779 /* mktable.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D171AF2216225C004922C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C7CCDF0221E3AA3001E74FA /* Casino.m in Sources */,
+				4C7CCE17222315E8001E74FA /* ToastManager.m in Sources */,
 				A4D171D7221728B3004922C1 /* Hand.m in Sources */,
 				4C7CCE132222A963001E74FA /* HSTableViewCells.m in Sources */,
 				4CA4DB42221B79FC00E8A050 /* GammaGameLimit.m in Sources */,
@@ -431,6 +1037,7 @@
 				4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */,
 				4C7CCDF9221E4163001E74FA /* Store.m in Sources */,
 				4CA4DB45221B7BFA00E8A050 /* GammaTournament.m in Sources */,
+				4C3C2826222B639100B7C779 /* PokerHoldemCalculator.mm in Sources */,
 				A4D171B82216225C004922C1 /* AppDelegate.m in Sources */,
 				4C7CCDF3221E3AD9001E74FA /* Casino+Gamma.m in Sources */,
 				4C7CCE0D22226A0E001E74FA /* LocationManager.m in Sources */,
@@ -457,6 +1064,107 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C3C2767222B59C400B7C779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
+					"$(PROJECT_DIR)/poker-eval/**",
+					"$(PROJECT_DIR)/hand-dist/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C3C2768222B59C400B7C779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
+					"$(PROJECT_DIR)/poker-eval/**",
+					"$(PROJECT_DIR)/hand-dist/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C3C2774222B59CD00B7C779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"CARDS_DEALT=5",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C3C2775222B59CD00B7C779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				GCC_PREPROCESSOR_DEFINITIONS = "CARDS_DEALT=5";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C3C2832222B686500B7C779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4C3C2833222B686500B7C779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		A4D171C72216225D004922C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,11 +1219,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PokerBuddy",
+					"$(PROJECT_DIR)/poker-eval/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -568,8 +1277,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PokerBuddy",
+					"$(PROJECT_DIR)/poker-eval/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -586,10 +1296,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAZ26D947S;
 				INFOPLIST_FILE = PokerBuddy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.huskysoft.PokerBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,10 +1319,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAZ26D947S;
 				INFOPLIST_FILE = PokerBuddy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PokerBuddy",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.huskysoft.PokerBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -619,6 +1337,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C3C2766222B59C400B7C779 /* Build configuration list for PBXNativeTarget "hand-dist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3C2767222B59C400B7C779 /* Debug */,
+				4C3C2768222B59C400B7C779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C3C2773222B59CD00B7C779 /* Build configuration list for PBXNativeTarget "poker-eval" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3C2774222B59CD00B7C779 /* Debug */,
+				4C3C2775222B59CD00B7C779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C3C2831222B686500B7C779 /* Build configuration list for PBXNativeTarget "generate-poker-tables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3C2832222B686500B7C779 /* Debug */,
+				4C3C2833222B686500B7C779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A4D171AE2216225C004922C1 /* Build configuration list for PBXProject "PokerBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

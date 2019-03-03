@@ -8,6 +8,8 @@
 #warning remove this
 #import "GammaAPIController.h"
 #import "GammaCasino.h"
+#import "Calculator/PokerHoldemCalculator.h"
+
 @interface AppDelegate () <LocationManagerDelegate>
 @property(nonatomic, readonly) LocationManager *locationManager;
 @end
@@ -26,6 +28,11 @@
   [self.window makeKeyAndVisible];
 
   _locationManager = [LocationManager locationManagerWithDelegate:self];
+
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self doTest];
+  });
+
   return YES;
 }
 
@@ -45,6 +52,12 @@
        [[ToastManager manager] showToast:@"Casinos updated."];
      });
   }];
+}
+
+#warning remove
+- (void)doTest {
+  PokerHoldemCalculator *calc = [[PokerHoldemCalculator alloc] init];
+  [calc calculate];
 }
 
 @end
