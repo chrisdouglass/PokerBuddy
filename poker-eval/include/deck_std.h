@@ -29,6 +29,14 @@
 #define __DECK_STD_H__
 
 #include "pokereval_export.h"
+#include "deck.h"
+
+typedef unsigned char  uint8;
+#ifndef HAVE_INT8
+typedef signed char   int8;
+#endif
+typedef unsigned short uint16;
+typedef unsigned int   uint32;
 
 /* MUST be lower than STRING_CARDS from lib/deck.c */
 #define StdDeck_N_CARDS      52

@@ -8,7 +8,7 @@
 #warning remove this
 #import "GammaAPIController.h"
 #import "GammaCasino.h"
-#import "Calculator/PokerHoldemCalculator.h"
+#import "Calculator/HoldemEquityCalculator.h"
 
 @interface AppDelegate () <LocationManagerDelegate>
 @property(nonatomic, readonly) LocationManager *locationManager;
@@ -56,7 +56,7 @@
 
 #warning remove
 - (void)doTest {
-  PokerHoldemCalculator *calc = [[PokerHoldemCalculator alloc] init];
+  HoldemEquityCalculator *calc = [[HoldemEquityCalculator alloc] init];
   [calc calculate];
 }
 
