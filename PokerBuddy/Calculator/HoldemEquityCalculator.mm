@@ -52,23 +52,29 @@ NS_ASSUME_NONNULL_BEGIN
   return [HandDistribution singleHandDistributionFromString:string];
 }
 
+// This is "expensive", so cache it.
 + (instancetype)allHandsDistribution {
-  NSMutableSet<HoldemHand *> *hands = [NSMutableSet set];
-  for (Rank rank1 = StdDeck_Rank_FIRST; rank1 <= StdDeck_Rank_LAST; rank1++) {
-    for (Suit suit1 = StdDeck_Suit_FIRST; suit1 <= StdDeck_Suit_LAST; suit1++) {
-      for (Rank rank2 = StdDeck_Rank_FIRST; rank2 <= StdDeck_Rank_LAST; rank2++) {
-        for (Suit suit2 = StdDeck_Rank_FIRST; suit2 <= StdDeck_Suit_LAST; suit2++) {
-          if (rank1 == rank2 && suit1 == suit2) {
-            continue;
+  static dispatch_once_t onceToken;
+  __block NSSet<HoldemHand *> *hands;
+  dispatch_once(&onceToken, ^{
+    NSMutableSet<HoldemHand *> *mutableHands = [NSMutableSet set];
+    for (Rank rank1 = StdDeck_Rank_FIRST; rank1 <= StdDeck_Rank_LAST; rank1++) {
+      for (Suit suit1 = StdDeck_Suit_FIRST; suit1 <= StdDeck_Suit_LAST; suit1++) {
+        for (Rank rank2 = StdDeck_Rank_FIRST; rank2 <= StdDeck_Rank_LAST; rank2++) {
+          for (Suit suit2 = StdDeck_Rank_FIRST; suit2 <= StdDeck_Suit_LAST; suit2++) {
+            if (rank1 == rank2 && suit1 == suit2) {
+              continue;
+            }
+            HoldemHand *hand = [[HoldemHand alloc] init];
+            hand.card1 = [HoldemCard cardWithRank:rank1 andSuit:suit1];
+            hand.card2 = [HoldemCard cardWithRank:rank2 andSuit:suit2];
+            [mutableHands addObject:hand];
           }
-          HoldemHand *hand = [[HoldemHand alloc] init];
-          hand.card1 = [HoldemCard cardWithRank:rank1 andSuit:suit1];
-          hand.card2 = [HoldemCard cardWithRank:rank2 andSuit:suit2];
-          [hands addObject:hand];
         }
       }
     }
-  }
+    hands = mutableHands;
+  });
   return [[HandDistribution alloc] initWithHandSet:hands];
 }
 
