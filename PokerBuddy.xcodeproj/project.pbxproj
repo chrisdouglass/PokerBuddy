@@ -42,7 +42,7 @@
 		4C3C2820222B60EA00B7C779 /* HoldemEquityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C281E222B60EA00B7C779 /* HoldemEquityTest.cpp */; };
 		4C3C2821222B60EA00B7C779 /* OmahaEquityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C281F222B60EA00B7C779 /* OmahaEquityTest.cpp */; };
 		4C3C2822222B62C100B7C779 /* libpoker-eval.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C276D222B59CD00B7C779 /* libpoker-eval.a */; };
-		4C3C2826222B639100B7C779 /* PokerHoldemCalculator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2825222B639100B7C779 /* PokerHoldemCalculator.mm */; };
+		4C3C2826222B639100B7C779 /* HoldemEquityCalculator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2825222B639100B7C779 /* HoldemEquityCalculator.mm */; };
 		4C3C2827222B659C00B7C779 /* libhand-dist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C2760222B59C400B7C779 /* libhand-dist.a */; };
 		4C3C2834222B688700B7C779 /* mktab_basic.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C279D222B5D0200B7C779 /* mktab_basic.c */; };
 		4C3C283E222B697C00B7C779 /* mktable_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C27A2222B5D0200B7C779 /* mktable_utils.c */; };
@@ -56,6 +56,10 @@
 		4C4C7B12222B6B4F009F1C84 /* t_nbits.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B09222B6B4E009F1C84 /* t_nbits.c */; };
 		4C4C7B13222B6B4F009F1C84 /* t_topfivebits.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B0A222B6B4E009F1C84 /* t_topfivebits.c */; };
 		4C4C7B14222B6B4F009F1C84 /* t_topfivecards.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B0B222B6B4E009F1C84 /* t_topfivecards.c */; };
+		4C4C7B1C222BB901009F1C84 /* PokerBuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B1B222BB901009F1C84 /* PokerBuddyTests.m */; };
+		4C4C7B24222BB91C009F1C84 /* HoldemEquityCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C7B23222BB91C009F1C84 /* HoldemEquityCalculatorTests.m */; };
+		4C4C7B26222BBE0F009F1C84 /* libpoker-eval.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3C276D222B59CD00B7C779 /* libpoker-eval.a */; };
+		4C4C7B27222BBE23009F1C84 /* HoldemEquityCalculator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C2825222B639100B7C779 /* HoldemEquityCalculator.mm */; };
 		4C7CCDDD221D364E001E74FA /* CasinoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */; };
 		4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE2221D3A2C001E74FA /* RootTabBarController.m */; };
 		4C7CCDE5221D46B0001E74FA /* holdem_hands_sorted_ev.new.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C7CCDE4221D46AF001E74FA /* holdem_hands_sorted_ev.new.txt */; };
@@ -88,6 +92,16 @@
 		A4D171DC22175C8A004922C1 /* holdem_hands_sorted_actual_ev.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4D171DA22175C8A004922C1 /* holdem_hands_sorted_actual_ev.txt */; };
 		A4D171DD22175C8A004922C1 /* holdem_hands_sorted_ev.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4D171DB22175C8A004922C1 /* holdem_hands_sorted_ev.txt */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C4C7B1E222BB901009F1C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4D171AB2216225B004922C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4D171B22216225C004922C1;
+			remoteInfo = PokerBuddy;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4C3C275E222B59C400B7C779 /* CopyFiles */ = {
@@ -256,8 +270,8 @@
 		4C3C2806222B5D0200B7C779 /* game_joker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_joker.h; sourceTree = "<group>"; };
 		4C3C281E222B60EA00B7C779 /* HoldemEquityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HoldemEquityTest.cpp; sourceTree = "<group>"; };
 		4C3C281F222B60EA00B7C779 /* OmahaEquityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OmahaEquityTest.cpp; sourceTree = "<group>"; };
-		4C3C2824222B639100B7C779 /* PokerHoldemCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokerHoldemCalculator.h; sourceTree = "<group>"; };
-		4C3C2825222B639100B7C779 /* PokerHoldemCalculator.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PokerHoldemCalculator.mm; sourceTree = "<group>"; };
+		4C3C2824222B639100B7C779 /* HoldemEquityCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoldemEquityCalculator.h; sourceTree = "<group>"; };
+		4C3C2825222B639100B7C779 /* HoldemEquityCalculator.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HoldemEquityCalculator.mm; sourceTree = "<group>"; };
 		4C3C282D222B686500B7C779 /* generate-poker-tables */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "generate-poker-tables"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4C7B03222B6B4E009F1C84 /* t_maskrank.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_maskrank.c; sourceTree = "<group>"; };
 		4C4C7B04222B6B4E009F1C84 /* t_cardmasks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_cardmasks.c; sourceTree = "<group>"; };
@@ -268,6 +282,10 @@
 		4C4C7B09222B6B4E009F1C84 /* t_nbits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_nbits.c; sourceTree = "<group>"; };
 		4C4C7B0A222B6B4E009F1C84 /* t_topfivebits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_topfivebits.c; sourceTree = "<group>"; };
 		4C4C7B0B222B6B4E009F1C84 /* t_topfivecards.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t_topfivecards.c; sourceTree = "<group>"; };
+		4C4C7B19222BB901009F1C84 /* PokerBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4C7B1B222BB901009F1C84 /* PokerBuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokerBuddyTests.m; sourceTree = "<group>"; };
+		4C4C7B1D222BB901009F1C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C4C7B23222BB91C009F1C84 /* HoldemEquityCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoldemEquityCalculatorTests.m; sourceTree = "<group>"; };
 		4C7CCDDB221D364E001E74FA /* CasinoListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CasinoListTableViewController.h; sourceTree = "<group>"; };
 		4C7CCDDC221D364E001E74FA /* CasinoListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CasinoListTableViewController.m; sourceTree = "<group>"; };
 		4C7CCDE1221D3A2C001E74FA /* RootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
@@ -346,6 +364,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C4C7B16222BB901009F1C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4C7B26222BBE0F009F1C84 /* libpoker-eval.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,10 +600,20 @@
 		4C3C2823222B636600B7C779 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				4C3C2824222B639100B7C779 /* PokerHoldemCalculator.h */,
-				4C3C2825222B639100B7C779 /* PokerHoldemCalculator.mm */,
+				4C3C2824222B639100B7C779 /* HoldemEquityCalculator.h */,
+				4C3C2825222B639100B7C779 /* HoldemEquityCalculator.mm */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		4C4C7B1A222BB901009F1C84 /* PokerBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C4C7B1B222BB901009F1C84 /* PokerBuddyTests.m */,
+				4C4C7B1D222BB901009F1C84 /* Info.plist */,
+				4C4C7B23222BB91C009F1C84 /* HoldemEquityCalculatorTests.m */,
+			);
+			path = PokerBuddyTests;
 			sourceTree = "<group>";
 		};
 		4C7CCDDA221D362A001E74FA /* CasinoList */ = {
@@ -698,6 +734,7 @@
 				A4D171B52216225C004922C1 /* PokerBuddy */,
 				4C3C2761222B59C400B7C779 /* hand-dist */,
 				4C3C276E222B59CD00B7C779 /* poker-eval */,
+				4C4C7B1A222BB901009F1C84 /* PokerBuddyTests */,
 				A4D171B42216225C004922C1 /* Products */,
 				4C7CCDF4221E3DB9001E74FA /* Frameworks */,
 				1323E35C6E8EC093A649A700 /* Pods */,
@@ -711,6 +748,7 @@
 				4C3C2760222B59C400B7C779 /* libhand-dist.a */,
 				4C3C276D222B59CD00B7C779 /* libpoker-eval.a */,
 				4C3C282D222B686500B7C779 /* generate-poker-tables */,
+				4C4C7B19222BB901009F1C84 /* PokerBuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -821,6 +859,24 @@
 			productReference = 4C3C282D222B686500B7C779 /* generate-poker-tables */;
 			productType = "com.apple.product-type.tool";
 		};
+		4C4C7B18222BB901009F1C84 /* PokerBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C4C7B20222BB902009F1C84 /* Build configuration list for PBXNativeTarget "PokerBuddyTests" */;
+			buildPhases = (
+				4C4C7B15222BB901009F1C84 /* Sources */,
+				4C4C7B16222BB901009F1C84 /* Frameworks */,
+				4C4C7B17222BB901009F1C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C4C7B1F222BB901009F1C84 /* PBXTargetDependency */,
+			);
+			name = PokerBuddyTests;
+			productName = PokerBuddyTests;
+			productReference = 4C4C7B19222BB901009F1C84 /* PokerBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A4D171B22216225C004922C1 /* PokerBuddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4D171C92216225D004922C1 /* Build configuration list for PBXNativeTarget "PokerBuddy" */;
@@ -859,6 +915,9 @@
 					4C3C282C222B686500B7C779 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					4C4C7B18222BB901009F1C84 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					A4D171B22216225C004922C1 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -881,11 +940,19 @@
 				4C3C275F222B59C400B7C779 /* hand-dist */,
 				4C3C276C222B59CD00B7C779 /* poker-eval */,
 				4C3C282C222B686500B7C779 /* generate-poker-tables */,
+				4C4C7B18222BB901009F1C84 /* PokerBuddyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C4C7B17222BB901009F1C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D171B12216225C004922C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1021,6 +1088,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C4C7B15222BB901009F1C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4C7B27222BBE23009F1C84 /* HoldemEquityCalculator.mm in Sources */,
+				4C4C7B1C222BB901009F1C84 /* PokerBuddyTests.m in Sources */,
+				4C4C7B24222BB91C009F1C84 /* HoldemEquityCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D171AF2216225C004922C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1037,7 +1114,7 @@
 				4C7CCDE3221D3A2C001E74FA /* RootTabBarController.m in Sources */,
 				4C7CCDF9221E4163001E74FA /* Store.m in Sources */,
 				4CA4DB45221B7BFA00E8A050 /* GammaTournament.m in Sources */,
-				4C3C2826222B639100B7C779 /* PokerHoldemCalculator.mm in Sources */,
+				4C3C2826222B639100B7C779 /* HoldemEquityCalculator.mm in Sources */,
 				A4D171B82216225C004922C1 /* AppDelegate.m in Sources */,
 				4C7CCDF3221E3AD9001E74FA /* Casino+Gamma.m in Sources */,
 				4C7CCE0D22226A0E001E74FA /* LocationManager.m in Sources */,
@@ -1051,6 +1128,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C4C7B1F222BB901009F1C84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4D171B22216225C004922C1 /* PokerBuddy */;
+			targetProxy = 4C4C7B1E222BB901009F1C84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A4D171C12216225D004922C1 /* LaunchScreen.storyboard */ = {
@@ -1165,6 +1250,43 @@
 			};
 			name = Release;
 		};
+		4C4C7B21222BB902009F1C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				INFOPLIST_FILE = PokerBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.huskysoft.PokerBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C4C7B22222BB902009F1C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAZ26D947S;
+				INFOPLIST_FILE = PokerBuddyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.huskysoft.PokerBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A4D171C72216225D004922C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1220,6 +1342,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PokerBuddy",
 					"$(PROJECT_DIR)/poker-eval/**",
+					"$(PROJECT_DIR)",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1278,6 +1401,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PokerBuddy",
 					"$(PROJECT_DIR)/poker-eval/**",
+					"$(PROJECT_DIR)",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1360,6 +1484,15 @@
 			buildConfigurations = (
 				4C3C2832222B686500B7C779 /* Debug */,
 				4C3C2833222B686500B7C779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C4C7B20222BB902009F1C84 /* Build configuration list for PBXNativeTarget "PokerBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C4C7B21222BB902009F1C84 /* Debug */,
+				4C4C7B22222BB902009F1C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
