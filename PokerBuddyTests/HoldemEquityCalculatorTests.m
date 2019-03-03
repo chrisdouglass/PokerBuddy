@@ -93,4 +93,15 @@
   XCTAssertEqualObjects(dist.allHands, expectedHands);
 }
 
+- (void)testHoldemHandContainsAtLeastOneCardFromCards {
+  NSSet<HoldemCard *> *allAces =
+      [NSSet setWithObjects:[HoldemCard cardFromString:@"Ad"], [HoldemCard cardFromString:@"As"],
+                            [HoldemCard cardFromString:@"Ac"], [HoldemCard cardFromString:@"Ah"],
+                            nil];
+  HoldemHand *containsAceHand = [HoldemHand handFromString:@"AdQc"];
+  XCTAssertTrue([containsAceHand containsAtLeastOneCardFromCards:allAces]);
+  HoldemHand *doesNotContainAceHand = [HoldemHand handFromString:@"KsTh"];
+  XCTAssertFalse([doesNotContainAceHand containsAtLeastOneCardFromCards:allAces]);
+}
+
 @end

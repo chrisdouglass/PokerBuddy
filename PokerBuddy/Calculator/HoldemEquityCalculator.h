@@ -29,6 +29,9 @@ typedef uint64_t Suit;
 
 + (instancetype)handFromString:(NSString *)string;
 
+/** Used to determine if a hand is blocked. */
+- (BOOL)containsAtLeastOneCardFromCards:(NSSet<HoldemCard *> *)cards;
+
 - (BOOL)isEqualToHand:(HoldemHand *)hand;
 
 @end

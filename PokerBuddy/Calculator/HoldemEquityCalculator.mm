@@ -147,8 +147,22 @@ NS_ASSUME_NONNULL_BEGIN
   return card;
 }
 
+- (BOOL)isEqual:(id)object {
+  if (self == object) {
+    return YES;
+  }
+  if (![object isKindOfClass:[HoldemCard class]]) {
+    return NO;
+  }
+  return [self isEqualToCard:object];
+}
+
 - (BOOL)isEqualToCard:(HoldemCard *)card {
   return StdDeck_CardMask_EQUAL(self.mask, card.mask);
+}
+
+- (NSUInteger)hash {
+  return self.rank * 7 + self.suit * 9;
 }
 
 + (Rank)charToRank:(const char)c {
@@ -222,6 +236,11 @@ NS_ASSUME_NONNULL_BEGIN
   hand.card1 = [HoldemCard cardFromString:[string substringWithRange:NSMakeRange(0, 2)]];
   hand.card2 = [HoldemCard cardFromString:[string substringWithRange:NSMakeRange(2, 2)]];
   return hand;
+}
+
+- (BOOL)containsAtLeastOneCardFromCards:(NSSet<HoldemCard *> *)cards {
+  NSSet<HoldemCard *> *handCards = [NSSet setWithObjects:self.card1, self.card2, nil];
+  return [cards intersectsSet:handCards];
 }
 
 - (BOOL)isEqual:(id)object {
