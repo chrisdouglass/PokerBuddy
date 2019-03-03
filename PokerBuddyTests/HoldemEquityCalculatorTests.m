@@ -75,21 +75,22 @@
 }
 
 - (void)testAllHandsDistribution {
-//  NSMutableSet<HoldemHand *> *expectedHands = [NSMutableSet set];
-//  for (Rank rank1 = StdDeck_Rank_FIRST; rank1 <= StdDeck_Rank_LAST; rank1++) {
-//    for (Suit firstSuit = StdDeck_Suit_FIRST; firstSuit <= StdDeck_Suit_LAST; firstSuit++) {
-//      for (Suit secondSuit = StdDeck_Suit_FIRST; secondSuit <= StdDeck_Suit_LAST;
-//           secondSuit++) {
-//        HoldemHand *hand = [[HoldemHand alloc] init];
-//        hand.card1 = [HoldemCard cardWithRank:rank1 andSuit:firstSuit];
-//        hand.card2 = [HoldemCard cardWithRank:r andSuit:secondSuit];
-//        [expectedHands addObject:hand];
-//      }
-//    }
-//  }
-//  XCTAssertEqual(expectedHands.count, 1326, @"Did not correctly generate expected hands.");
   HandDistribution *dist = [HandDistribution distributionFromString:@"**"];
-  XCTAssertEqual(dist.allHands.count, 1326);
+  NSError *loadHandsError = nil;
+  NSString *allHandsTxtPath =
+      [[NSBundle bundleForClass:[self class]] pathForResource:@"all_hands" ofType:@"txt"];
+  NSString *handStringsList = [NSString stringWithContentsOfFile:allHandsTxtPath
+                                                        encoding:NSUTF8StringEncoding
+                                                           error:&loadHandsError];
+  NSArray<NSString *> *handStrings =
+      [handStringsList componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+  XCTAssertNil(loadHandsError);
+  NSMutableSet<HoldemHand *> *expectedHands = [NSMutableSet set];
+  [handStrings enumerateObjectsUsingBlock:^(NSString *handString, NSUInteger idx, BOOL *stop) {
+    [expectedHands addObject:[HoldemHand handFromString:handString]];
+  }];
+  XCTAssertEqual(expectedHands.count, 1326);
+  XCTAssertEqualObjects(dist.allHands, expectedHands);
 }
 
 @end
