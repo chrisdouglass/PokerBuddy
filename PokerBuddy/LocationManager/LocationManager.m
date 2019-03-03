@@ -75,7 +75,17 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-  NSAssert(NO, @"Manager failed with error %@", error);
+  CLError errorCode = error.code;
+  switch (errorCode) {
+    case kCLErrorLocationUnknown:
+      break;
+    case kCLErrorDenied:
+      break;
+    case kCLErrorNetwork:
+    default:
+      NSAssert(NO, @"Manager failed with unhandled error %@, code %ld", error, error.code);
+      break;
+  }
 }
 
 - (nullable CLLocation *)currentLocation {
