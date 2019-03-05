@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)rangeFromString:(NSString *)string;
 
-+ (instancetype)emptyRange;
++ (instancetype)range;
 
 /** Splits a string by '|' and creates a range for each component. */
 + (NSArray<PERange *> *)rangesFromString:(NSString *)string;

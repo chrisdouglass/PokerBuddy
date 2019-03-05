@@ -21,6 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
   return [cards intersectsSet:handCards];
 }
 
+- (StdDeck_CardMask)mask {
+  StdDeck_CardMask mask;
+  StdDeck_CardMask_RESET(mask);
+  StdDeck_CardMask_OR(mask, self.card1.mask, self.card2.mask);
+  return mask;
+}
+
 - (BOOL)isEqual:(id)object {
   if (self == object) {
     return YES;

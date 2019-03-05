@@ -4,6 +4,14 @@
 #import "Model/PEHand.h"
 #import "Model/PERange.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+static const NSUInteger kNonAceHandsCount = StdDeck_Rank_COUNT - 1;
+static const NSUInteger kOffsuitHandCombinationCount = 12;
+static const NSUInteger kSuitedHandCombinationCount = StdDeck_Suit_COUNT;
+static const NSUInteger kAllPossibleNonpairedHandsCount = 12 + StdDeck_Suit_COUNT;
+static const NSUInteger kPairCombinations = 6;
+
 @interface PERangeTests : XCTestCase
 
 @end
@@ -70,30 +78,35 @@
   XCTAssertEqualObjects([pocketPairsRange rangeByAddingRange:singleRange].allHands, expectedHands);
 }
 
-- (void)testEmptyRange {
-  XCTAssertEqual([PERange emptyRange].allHands.count, 0);
+- (void)testRange {
+  XCTAssertEqual([PERange range].allHands.count, 0);
 }
 
 - (void)testUpcappedRangeWithPlus {
   PERange *anySuitedAceRange = [PERange rangeFromString:@"A2s+"];
-  XCTAssertEqual(anySuitedAceRange.count, 48);
+  XCTAssertEqual(anySuitedAceRange.count, kSuitedHandCombinationCount * kNonAceHandsCount);
 
   PERange *anyOffsuitAceRange = [PERange rangeFromString:@"A2o+"];
-  XCTAssertEqual(anyOffsuitAceRange.count, 144);
+  XCTAssertEqual(anyOffsuitAceRange.count, kOffsuitHandCombinationCount * kNonAceHandsCount);
 
   PERange *anyAceRange = [PERange rangeFromString:@"A2+"];
-  XCTAssertEqual(anyAceRange.count, 192);
+  XCTAssertEqual(anyAceRange.count, kAllPossibleNonpairedHandsCount * kNonAceHandsCount);
 }
 
 - (void)testUpcappedRangeWithX {
   PERange *anySuitedAceRange = [PERange rangeFromString:@"AXs"];
-  XCTAssertEqual(anySuitedAceRange.count, 48);
+  XCTAssertEqual(anySuitedAceRange.count, kSuitedHandCombinationCount * kNonAceHandsCount);
 
   PERange *anyOffsuitAceRange = [PERange rangeFromString:@"AXo"];
-  XCTAssertEqual(anyOffsuitAceRange.count, 144);
+  XCTAssertEqual(anyOffsuitAceRange.count, kOffsuitHandCombinationCount * kNonAceHandsCount);
 
   PERange *anyAceRange = [PERange rangeFromString:@"AX"];
-  XCTAssertEqual(anyAceRange.count, 192);
+  XCTAssertEqual(anyAceRange.count, kAllPossibleNonpairedHandsCount * kNonAceHandsCount);
+}
+
+- (void)testUncappedPairRange {
+  PERange *uncappedPairRange = [PERange rangeFromString:@"QQ+"];
+  XCTAssertEqual(uncappedPairRange.count, kPairCombinations * 3);
 }
 
 - (void)testMultipleRangesFromSingleString {
@@ -101,12 +114,15 @@
   NSArray<PERange *> *ranges = [PERange rangesFromString:multiRangeString];
   XCTAssertEqual(ranges.count, 3, @"Expected three ranges.");
 
-  PERange *singleCardRange = ranges[0];
-  XCTAssertEqual(singleCardRange.count, 1);
+  PERange *singleHandRange = ranges[0];
+  XCTAssertEqual(singleHandRange.count, 1);
   PERange *allSuitedAcesRange = ranges[1];
-  XCTAssertEqual(allSuitedAcesRange.count, 48);
+  XCTAssertEqual(allSuitedAcesRange.count, kSuitedHandCombinationCount * kNonAceHandsCount);
   PERange *queensOrBetterAndAnyAceQueenOrBetterRange = ranges[2];
-  XCTAssertEqual(queensOrBetterAndAnyAceQueenOrBetterRange.count, 48);
+  XCTAssertEqual(queensOrBetterAndAnyAceQueenOrBetterRange.count,
+                 3 * kPairCombinations + 2 * kAllPossibleNonpairedHandsCount);
 }
+
+NS_ASSUME_NONNULL_END
 
 @end

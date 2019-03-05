@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
     case 'X': case 'x': return 0;
 	};
 
-	return -1;
+	return kNoRankOrSuit;
 }
 
 + (char)rankToChar:(Rank)rank {
@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
     case StdDeck_Rank_2: return '2';
     case 'X': case 'x': return 0;
 	};
-  return NULL;
+  return kNoRankOrSuitChar;
 }
 
 + (Suit)charToSuit:(const char)s {
@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
     case 'H': case 'h':	return StdDeck_Suit_HEARTS;
 	};
 
-	return -1;
+	return kNoRankOrSuit;
 }
 
 + (char)suitToChar:(Suit)suit {
@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
     case StdDeck_Suit_DIAMONDS: return 'd';
     case StdDeck_Suit_HEARTS: return 'h';
 	};
-  return NULL;
+  return kNoRankOrSuitChar;
 }
 
 @end

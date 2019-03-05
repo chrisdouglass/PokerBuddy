@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
   NSMutableArray<PERange *> *ranges = [NSMutableArray array];
   for (NSString *component in components) {
     NSArray<NSString *> *groups = [component componentsSeparatedByString:@","];
-    PERange *mergedRange = [PERange emptyRange];
+    PERange *mergedRange = [PERange range];
     for (NSString *group in groups) {
       PERange *range = [self rangeFromString:group];
       if (range) {
@@ -41,29 +41,18 @@ NS_ASSUME_NONNULL_BEGIN
   return [PERange singleHandRangeFromString:string];
 }
 
-+ (instancetype)emptyRange {
++ (instancetype)range {
   return [[PERange alloc] initWithHands:@[]];
 }
 
 // This is "expensive", so cache it.
 + (instancetype)allHandsRange {
-  NSMutableSet<PEHand *> *mutableHands = [NSMutableSet set];
-  for (Rank rank1 = StdDeck_Rank_FIRST; rank1 <= StdDeck_Rank_LAST; rank1++) {
-    for (Suit suit1 = StdDeck_Suit_FIRST; suit1 <= StdDeck_Suit_LAST; suit1++) {
-      for (Rank rank2 = StdDeck_Rank_FIRST; rank2 <= StdDeck_Rank_LAST; rank2++) {
-        for (Suit suit2 = StdDeck_Rank_FIRST; suit2 <= StdDeck_Suit_LAST; suit2++) {
-          if (rank1 == rank2 && suit1 == suit2) {
-            continue;
-          }
-          PEHand *hand = [[PEHand alloc] init];
-          hand.card1 = [PECard cardWithRank:rank1 andSuit:suit1];
-          hand.card2 = [PECard cardWithRank:rank2 andSuit:suit2];
-          [mutableHands addObject:hand];
-        }
-      }
-    }
-  }
-  return [[PERange alloc] initWithHandSet:mutableHands];
+  return [self rangeWithFirstRank:StdDeck_Rank_FIRST
+                       secondRank:StdDeck_Rank_FIRST
+                      ignorePairs:NO
+                        onlyPairs:NO
+                           suited:NO
+                          offsuit:NO];
 }
 
 + (instancetype)singleHandRangeFromString:(NSString *)string {
@@ -82,25 +71,102 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 + (instancetype)pocketPairRangeFromStrings:(NSArray<NSString *> *)strings {
-  Rank startRank = [PECard charToRank:[strings[0] characterAtIndex:0]];
-  Rank endRank = [PECard charToRank:[strings[1] characterAtIndex:0]];
-  NSMutableSet<PEHand *> *hands = [NSMutableSet set];
+  Rank startRank = [PECard charToRank:[strings.firstObject characterAtIndex:0]];
+  Rank endRank = [PECard charToRank:[strings.lastObject characterAtIndex:0]];
+  PERange *mergedRange = [PERange range];
   for (Rank r = startRank; r <= endRank; r++) {
-    for (Suit firstSuit = StdDeck_Suit_FIRST; firstSuit <= StdDeck_Suit_LAST; firstSuit++) {
-      for (Suit secondSuit = firstSuit + 1; secondSuit <= StdDeck_Suit_LAST;
-           secondSuit++) {
-        PEHand *hand = [[PEHand alloc] init];
-        hand.card1 = [PECard cardWithRank:r andSuit:firstSuit];
-        hand.card2 = [PECard cardWithRank:r andSuit:secondSuit];
-        [hands addObject:hand];
-      }
+    mergedRange = [mergedRange rangeByAddingRange:[self pocketPairRangeForRank:r]];
+  }
+  return mergedRange;
+}
+
++ (instancetype)pocketPairRangeForRank:(Rank)rank {
+  NSMutableSet<PEHand *> *hands = [NSMutableSet set];
+  for (Suit firstSuit = StdDeck_Suit_FIRST; firstSuit <= StdDeck_Suit_LAST; firstSuit++) {
+    for (Suit secondSuit = firstSuit + 1; secondSuit <= StdDeck_Suit_LAST; secondSuit++) {
+      PEHand *hand = [[PEHand alloc] init];
+      hand.card1 = [PECard cardWithRank:rank andSuit:firstSuit];
+      hand.card2 = [PECard cardWithRank:rank andSuit:secondSuit];
+      [hands addObject:hand];
     }
   }
   return [[PERange alloc] initWithHandSet:hands];
 }
 
 + (instancetype)uncappedRangeFromString:(NSString *)string {
-  return [[PERange alloc] init];
+  NSUInteger length = string.length;
+  BOOL suited = NO;
+  BOOL offsuit = NO;
+  Rank cardOneRank = kNoRankOrSuit;
+  Rank cardTwoRank = kNoRankOrSuit;
+  for (NSUInteger charIndex = 0; charIndex < length; charIndex++) {
+    unichar character = [string characterAtIndex:charIndex];
+    Rank rank = [PECard charToRank:character];
+    if (rank != kNoRankOrSuit) {
+      if (charIndex == 0) {
+        cardOneRank = rank;
+      } else if (charIndex == 1/* || charIndex == 2*/) {
+        cardTwoRank = rank;
+      }
+      continue;
+    }
+    // Not a rank character. Check for +, s, and o.
+    switch (character) {
+      case 'X': case 'x':
+        cardTwoRank = kNoRankOrSuit;
+        break;
+      case 'S': case 's':
+        suited = YES;
+        break;
+      case 'O': case 'o':
+        offsuit = YES;
+        break;
+    }
+  }
+  return [self rangeWithFirstRank:cardOneRank
+                       secondRank:cardTwoRank
+                      ignorePairs:(cardOneRank != cardTwoRank)
+                        onlyPairs:(cardOneRank == cardTwoRank)
+                           suited:suited
+                          offsuit:offsuit];
+}
+
++ (instancetype)rangeWithFirstRank:(Rank)firstRank
+                        secondRank:(Rank)secondRank
+                       ignorePairs:(BOOL)ignorePairs  // TODO: Replace this and onlyPairs with enum.
+                         onlyPairs:(BOOL)onlyPairs
+                            suited:(BOOL)isSuited
+                           offsuit:(BOOL)isOffsuit {
+  NSMutableSet<PEHand *> *mutableHands = [NSMutableSet set];
+  for (Rank rank1 = firstRank; rank1 <= StdDeck_Rank_LAST; rank1++) {
+    for (Suit suit1 = StdDeck_Suit_FIRST; suit1 <= StdDeck_Suit_LAST; suit1++) {
+      for (Rank rank2 = secondRank; rank2 <= StdDeck_Rank_LAST; rank2++) {
+        BOOL identicalRanks = (rank1 == rank2);
+        if (ignorePairs && identicalRanks) {
+          continue;
+        }
+        if (isSuited) {
+          PEHand *hand = [[PEHand alloc] init];
+          hand.card1 = [PECard cardWithRank:rank1 andSuit:suit1];
+          hand.card2 = [PECard cardWithRank:rank2 andSuit:suit1];
+          [mutableHands addObject:hand];
+          continue;
+        }
+        for (Suit suit2 = StdDeck_Rank_FIRST; suit2 <= StdDeck_Suit_LAST; suit2++) {
+          BOOL identicalSuits = (suit1 == suit2);
+          if ((isOffsuit && identicalSuits) || (identicalRanks && identicalSuits)
+              || (!identicalRanks && onlyPairs)) {
+            continue;
+          }
+          PEHand *hand = [[PEHand alloc] init];
+          hand.card1 = [PECard cardWithRank:rank1 andSuit:suit1];
+          hand.card2 = [PECard cardWithRank:rank2 andSuit:suit2];
+          [mutableHands addObject:hand];
+        }
+      }
+    }
+  }
+  return [[PERange alloc] initWithHandSet:mutableHands];
 }
 
 - (instancetype)initWithHands:(NSArray<PEHand *> *)hands {

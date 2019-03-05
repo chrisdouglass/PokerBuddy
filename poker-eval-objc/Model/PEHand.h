@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+#import "poker-eval/include/deck_std.h"
+
 @class PECard;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -8,6 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic) PECard *card1;
 @property(nonatomic) PECard *card2;
+@property(nonatomic, readonly) StdDeck_CardMask mask;
 
 /** Expected format: RankSuitRankSuitRankSuit... Ex: AdKdQdJdTd. */
 + (instancetype)handFromString:(NSString *)string;
